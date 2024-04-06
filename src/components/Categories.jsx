@@ -13,10 +13,8 @@ function CategoriesComp({}) {
   }, []);
 
   useEffect(() => {
-    if (data && data.data && data.data.data && data.data.data.cards) {
-      const categoriesData =
-        data?.data?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle
-          ?.info || [];
+    if (data && data.data) {
+      const categoriesData = data?.data?.categories?.info || [];
       setCategories(categoriesData);
     }
   }, [data]);

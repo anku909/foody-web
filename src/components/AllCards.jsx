@@ -16,10 +16,8 @@ function AllCards({ visible, setVisible }) {
   }, []);
 
   useEffect(() => {
-    if (data && data.data && data.data.data && data.data.data.cards) {
-      const restaurants =
-        data?.data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants || [];
+    if (data && data.data) {
+      const restaurants = data?.data?.allResList || [];
       setRestaurants(restaurants);
       setFilteredRestaurants(restaurants);
     }
