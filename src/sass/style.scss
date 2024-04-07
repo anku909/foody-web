@@ -14,7 +14,7 @@
   filter: drop-shadow(0px 0px 6px rgb(209, 207, 207));
   @include mobile {
     width: 100%;
-    height: 3vh;
+    height: 5vh;
     padding: 0 5px;
     // background-color: red;
     display: flex;
@@ -23,58 +23,66 @@
     filter: drop-shadow(0px 0px 4px rgb(220, 220, 220));
   }
   .logo {
-    width: 70px;
-    margin-left: 150px;
+    font-size: 35px;
+    margin-left: 130px;
     transition: all 0.5s;
-    &:hover {
-      scale: 1.2;
-      rotate: 360deg;
-      cursor: pointer;
-    }
+    font-weight: 900;
+    color: transparent;
+    font-family: "Poppins";
+    -webkit-text-stroke: 2px rgb(10, 144, 32);
     @include mobile {
-      width: 20px;
       margin-left: 30px;
-    }
-    span {
-      font-size: 20px;
-    }
-    @include mobile {
       font-size: 13px;
-      font-family: "Poppins";
       font-weight: 900;
       color: transparent;
-      -webkit-text-stroke: 1px rgb(9, 111, 26);
+      -webkit-text-stroke: 1px rgb(10, 144, 32);
     }
   }
 
   .nav-items {
-    margin-right: 10rem;
-    ul {
-      display: flex;
-      align-items: center;
-    }
+    margin-right: 8rem;
 
     @include mobile {
       margin-right: 1.5rem;
     }
-
-    .navlink {
-      font-size: 1.1rem;
-      font-weight: 400;
-      list-style: none;
-      padding-right: 6rem;
-      color: black;
-      text-decoration: none;
-
-      &:hover {
-        color: green;
-        cursor: pointer;
-      }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 20px;
       @include mobile {
-        font-size: 0.5rem;
-        font-weight: 400;
-        padding-right: 1.2rem;
-        color: black;
+        gap: 5px;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5rem;
+        font-weight: 500;
+        font-size: 1.2rem;
+        @include mobile {
+          margin-right: 0.6rem;
+          font-size: 0.55rem;
+        }
+
+        i {
+          font-size: 22px;
+          margin-right: 5px;
+          @include mobile {
+            margin-right: 2px;
+            font-size: 10px;
+          }
+          .navlink {
+            list-style: none;
+            color: black;
+            text-decoration: none;
+          }
+        }
+        &:hover {
+          color: green;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -82,7 +90,7 @@
 
 .body {
   @include mobile {
-    padding: 0px 30px;
+    padding: 16px 30px;
   }
   .categories {
     width: 100%;
@@ -738,14 +746,26 @@
     display: flex;
     justify-content: center;
     padding-top: 200px;
+    @include mobile {
+      padding-top: 100px;
+    }
     .cart-empty {
       width: 50%;
       height: 50%;
       flex-direction: column;
       align-items: center;
+      @include mobile {
+        width: 70%;
+        height: 70%;
+      }
+
       .empty-cart-img {
         width: 200px;
         height: 250px;
+        @include mobile {
+          width: 180px;
+          height: 180px;
+        }
         img {
           width: 100%;
           height: 100%;
@@ -756,19 +776,87 @@
         font-size: 22px;
         font-weight: 400;
         margin-top: 20px;
+        @include mobile {
+          font-size: 18px;
+          margin-top: 5px;
+        }
       }
       p {
         font-size: 16px;
         font-weight: 400;
         margin-top: 5px;
+        @include mobile {
+          text-align: center;
+          font-size: 12px;
+          margin-top: 5px;
+        }
       }
       button {
         width: 200px;
         height: 40px;
         margin-top: 30px;
-        border-radius: 2px;
+        border-radius: 4px;
         background-color: rgb(4, 148, 18);
+        filter: drop-shadow(0px 4px 6px rgb(174, 174, 174));
         color: white;
+
+        @include mobile {
+          width: 120px;
+          height: 25px;
+          border-radius: 3px;
+          font-size: 11px;
+          filter: drop-shadow(0px 2px 5px rgb(159, 159, 159));
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+}
+
+.help-comp {
+  @include mobile {
+    width: 100%;
+    min-height: 200vh;
+    padding: 50px, 20px;
+  }
+  .help-comp-heading {
+    @include mobile {
+      padding: 50px 15px;
+    }
+    h3 {
+      @include mobile {
+        font-size: 30px;
+      }
+    }
+    p {
+      @include mobile {
+        padding-top: 2px;
+        font-size: 13px;
+      }
+    }
+  }
+  .help-body-container {
+    @include mobile {
+      padding-left: 15px;
+      padding-top: 20px;
+    }
+    .categories-section {
+      @include mobile {
+        width: 70px;
+        min-height: 600px;
+        padding-top: 10px;
+        padding-left: 5px;
+      }
+
+      .inside-div {
+        @include mobile {
+        }
+        h4 {
+          @include mobile {
+            font-size: 8px;
+            text-wrap: wrap;
+          }
+        }
       }
     }
   }

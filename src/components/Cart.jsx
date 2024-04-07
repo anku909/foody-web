@@ -11,7 +11,7 @@ const Cart = () => {
   }
   return (
     <>
-      <div className="cart w-full h-screen bg-white px-80 pt-24">
+      <div className="cart w-full h-screen  xl:bg-white xl:px-80 xl:pt-24">
         <div className="cart-container w-full h-screen ">
           <div
             className={`cart-empty w-1/2  ${

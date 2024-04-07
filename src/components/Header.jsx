@@ -6,21 +6,33 @@ function Header() {
     <>
       <div className="header w-full h-20 bg-slate-400 mb-40">
         <NavLink to="/">
-          <span className="logo">Foody</span>
+          <h2 className="logo">Foody</h2>
         </NavLink>
 
         <div className="nav-items">
           <ul>
-            <NavLink className="navlink" to="/offers">
-              offers
-            </NavLink>
-            <NavLink className="navlink" to="/help">
-              Help
-            </NavLink>
-            <p className="navlink">Sign in</p>
-            <NavLink className="navlink" to="/cart">
-              cart
-            </NavLink>
+            <span>
+              <i class="ri-coupon-2-line"></i>
+              <NavLink className="navlink" to="/offers">
+                Offers
+              </NavLink>
+            </span>
+            <span>
+              <i class="ri-question-line"></i>
+              <NavLink className="navlink" to="/help">
+                Help
+              </NavLink>
+            </span>
+            <span>
+              <i className="ri-user-3-line"></i>
+              <NavLink>Sign In</NavLink>
+            </span>
+            <span>
+              <i className="ri-shopping-bag-line"></i>
+              <NavLink className="navlink" to="/cart">
+                Cart
+              </NavLink>
+            </span>
           </ul>
         </div>
       </div>
