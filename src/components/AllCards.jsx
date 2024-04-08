@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../redux/slices/DataSlice";
+import { Link } from "react-router-dom";
 
 function AllCards({ visible, setVisible }) {
   const dispatch = useDispatch();
@@ -75,7 +76,7 @@ function AllCards({ visible, setVisible }) {
       </div>
       <div className="all-cards-section">
         {filteredRestaurants.map((resData) => (
-          <RestaurantCard key={resData.info.id} resdata={resData} />
+          <RestaurantCard resdata={resData} key={resData.info.id} />
         ))}
       </div>
     </>

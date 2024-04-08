@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 function Header() {
   return (
     <>
+      {console.log("rendered again")}
       <div className="header w-full h-20 bg-slate-400 mb-40">
         <NavLink to="/">
           <h2 className="logo">Foody</h2>
