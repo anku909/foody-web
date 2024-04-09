@@ -13,24 +13,26 @@ function Header() {
         <div className="nav-items">
           <ul>
             <span>
-              <i class="ri-coupon-2-line"></i>
               <NavLink className="navlink" to="/offers">
+                <i class="ri-coupon-2-line"></i>
                 Offers
               </NavLink>
             </span>
             <span>
-              <i class="ri-question-line"></i>
               <NavLink className="navlink" to="/help">
+                <i class="ri-question-line"></i>
                 Help
               </NavLink>
             </span>
             <span>
-              <i className="ri-user-3-line"></i>
-              <NavLink>Sign In</NavLink>
+              <NavLink>
+                <i className="ri-user-3-line"></i>
+                Sign In
+              </NavLink>
             </span>
             <span>
-              <i className="ri-shopping-bag-line"></i>
               <NavLink className="navlink" to="/cart">
+                <i className="ri-shopping-bag-line"></i>
                 Cart
               </NavLink>
             </span>

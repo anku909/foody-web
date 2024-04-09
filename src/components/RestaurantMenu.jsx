@@ -11,7 +11,7 @@ function RestaurantMenu() {
   useEffect(() => {
     dispatch(fetchData());
   }, []);
-
+  s;
   useEffect(() => {
     if (data && data.data) {
       const restaurants = data?.data?.allResList || [];
