@@ -11,7 +11,6 @@ function RestaurantMenu() {
   useEffect(() => {
     dispatch(fetchData());
   }, []);
-  s;
   useEffect(() => {
     if (data && data.data) {
       const restaurants = data?.data?.allResList || [];
@@ -31,6 +30,7 @@ function RestaurantMenu() {
         <div className="restaurant-menu-container w-full h-screen bg-white ">
           {clickedCard ? (
             <div key={clickedCard.info.id}>
+              <h4>{clickedCard.info.name}</h4>
               <p>{clickedCard.info.id}</p>
             </div>
           ) : null}

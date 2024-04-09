@@ -1,5 +1,4 @@
 import React from "react";
-
 function RestaurantCard(resData) {
   const { resdata } = resData;
 
@@ -8,7 +7,7 @@ function RestaurantCard(resData) {
   return (
     <>
       <div className="card">
-        <a href={"/restaurant/" + resData.resdata.info.id}>
+        <a href={"/restaurant/"}>
           <div className="card-img">
             <img
               src={imgaeBaseURL + resdata.info.cloudinaryImageId}
