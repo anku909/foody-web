@@ -7,7 +7,7 @@ function RestaurantCard(resData) {
   return (
     <>
       <div className="card">
-        <a href={"/restaurant/"}>
+        <a href={"/restaurant"}>
           <div className="card-img">
             <img
               src={imgaeBaseURL + resdata.info.cloudinaryImageId}
