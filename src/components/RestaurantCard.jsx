@@ -1,13 +1,11 @@
 import React from "react";
-function RestaurantCard(resData) {
-  const { resdata } = resData;
-
+function RestaurantCard({ resdata }) {
   let imgaeBaseURL =
     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
   return (
     <>
       <div className="card">
-        <a href={"/restaurant"}>
+        <a href={"/restaurant/" + resdata.info.id}>
           <div className="card-img">
             <img
               src={imgaeBaseURL + resdata.info.cloudinaryImageId}

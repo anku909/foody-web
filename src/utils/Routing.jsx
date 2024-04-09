@@ -13,7 +13,7 @@ function Routing() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/offers" element={<Offers />} />
         <Route path="/help" element={<Help />} />
-        <Route path="/restaurant" element={<RestaurantMenu />} />
+        <Route path="/restaurant/:resId" element={<RestaurantMenu />} />
       </Routes>
     </>
   );
