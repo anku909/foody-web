@@ -481,7 +481,7 @@
           height: 15px;
           margin-left: 10px;
         }
-        &::placeholder {
+        &::label {
           padding-left: 20px;
           font-size: 18px;
           @include mobile {
@@ -855,6 +855,116 @@
           @include mobile {
             font-size: 8px;
             text-wrap: wrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+.signIn {
+  @include mobile {
+    width: 100%;
+    height: 50vh;
+  }
+  .whiteArea {
+    @include mobile {
+      width: 40%;
+      height: 100vh;
+      padding-left: 15px;
+    }
+    .close-btn-container {
+      @include mobile {
+        height: 30px;
+      }
+
+      button {
+        @include mobile {
+          font-size: 23px;
+          padding-top: 0;
+        }
+      }
+    }
+
+    .signIn-signUp-container {
+      @include mobile {
+        .heading-container {
+          @include mobile {
+            width: 82%;
+            height: 60px;
+          }
+          .heading-txt {
+            @include mobile {
+              h4 {
+                font-size: 20px;
+              }
+              p {
+                font-size: 6px;
+                margin-top: 0px;
+              }
+            }
+            @include mobile {
+              .line {
+                width: 14px;
+                height: 1px;
+                margin-top: 4px;
+              }
+            }
+          }
+          img {
+            @include mobile {
+              width: 55px;
+            }
+          }
+        }
+
+        .login-function {
+          @include mobile {
+            padding-top: 20px;
+            .input-box {
+              @include mobile {
+                width: 130px;
+                height: 30px;
+              }
+              input {
+                @include mobile {
+                  width: 110px;
+                  height: 15px;
+                  margin-left: 15px;
+                  margin-top: 10px;
+                }
+              }
+              label {
+                @include mobile {
+                  font-size: 6px;
+                  top: -2px;
+                  left: 15px;
+                }
+              }
+            }
+            .login-btn {
+              @include mobile {
+                button {
+                  @include mobile {
+                    padding: 2px 50px;
+                    margin-top: 15px;
+                    font-size: 10px;
+                    font-weight: 500;
+                  }
+                }
+              }
+            }
+            .term-conditions {
+              @include mobile {
+                width: 80%;
+                margin-top: 0px;
+              }
+              p {
+                @include mobile {
+                  font-size: 4px;
+                }
+              }
+            }
           }
         }
       }

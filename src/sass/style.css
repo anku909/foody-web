@@ -528,20 +528,12 @@
     margin-left: 10px;
   }
 }
-.body .filters-search-section .searchBar input::-moz-placeholder {
-  padding-left: 20px;
-  font-size: 18px;
-}
-.body .filters-search-section .searchBar input::placeholder {
+.body .filters-search-section .searchBar input::label {
   padding-left: 20px;
   font-size: 18px;
 }
 @media screen and (max-width: 460px) {
-  .body .filters-search-section .searchBar input::-moz-placeholder {
-    padding-left: 10px;
-    font-size: 8px;
-  }
-  .body .filters-search-section .searchBar input::placeholder {
+  .body .filters-search-section .searchBar input::label {
     padding-left: 10px;
     font-size: 8px;
   }
@@ -943,5 +935,102 @@
   .help-comp .help-body-container .categories-section .inside-div h4 {
     font-size: 8px;
     text-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .signIn {
+    width: 100%;
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 460px) {
+  .signIn .whiteArea {
+    width: 40%;
+    height: 100vh;
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .signIn .whiteArea .close-btn-container {
+    height: 30px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .signIn .whiteArea .close-btn-container button {
+    font-size: 23px;
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) {
+  .signIn .whiteArea .signIn-signUp-container .heading-container {
+    width: 82%;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) {
+  .signIn .whiteArea .signIn-signUp-container .heading-container .heading-txt h4 {
+    font-size: 20px;
+  }
+  .signIn .whiteArea .signIn-signUp-container .heading-container .heading-txt p {
+    font-size: 6px;
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) {
+  .signIn .whiteArea .signIn-signUp-container .heading-container .heading-txt .line {
+    width: 14px;
+    height: 1px;
+    margin-top: 4px;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) {
+  .signIn .whiteArea .signIn-signUp-container .heading-container img {
+    width: 55px;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) {
+  .signIn .whiteArea .signIn-signUp-container .login-function {
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
+  .signIn .whiteArea .signIn-signUp-container .login-function .input-box {
+    width: 130px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
+  .signIn .whiteArea .signIn-signUp-container .login-function .input-box input {
+    width: 110px;
+    height: 15px;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
+  .signIn .whiteArea .signIn-signUp-container .login-function .input-box label {
+    font-size: 6px;
+    top: -2px;
+    left: 15px;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
+  .signIn .whiteArea .signIn-signUp-container .login-function .login-btn button {
+    padding: 2px 50px;
+    margin-top: 15px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
+  .signIn .whiteArea .signIn-signUp-container .login-function .term-conditions {
+    width: 80%;
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
+  .signIn .whiteArea .signIn-signUp-container .login-function .term-conditions p {
+    font-size: 4px;
   }
 }/*# sourceMappingURL=style.css.map */

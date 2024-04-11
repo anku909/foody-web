@@ -12,11 +12,16 @@ function App() {
   function handleSignIn() {
     setToggled(!Toggled);
   }
+  {
+    Toggled
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "");
+  }
   return (
     <>
       <Provider store={store}>
-        {Toggled && <SignIn />}
-        <Header value={handleSignIn} />
+        {Toggled && <SignIn handleSignIn={handleSignIn} />}
+        <Header handleSignIn={handleSignIn} />
         <Routing />
       </Provider>
     </>

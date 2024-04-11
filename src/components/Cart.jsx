@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 
 const Cart = () => {
   const items = useSelector((state) => state.cart);
-  console.log(items.length);
   const navigate = useNavigate();
   function navigateToHome() {
     navigate("/");

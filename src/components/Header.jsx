@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Header({ value }) {
+function Header({ handleSignIn }) {
   return (
     <>
       <div className="header w-full h-20 bg-slate-400 mb-40">
@@ -24,7 +24,7 @@ function Header({ value }) {
               </NavLink>
             </span>
             <span>
-              <NavLink onClick={value}>
+              <NavLink onClick={handleSignIn}>
                 <i className="ri-user-3-line"></i>
                 Sign In
               </NavLink>
