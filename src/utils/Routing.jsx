@@ -5,6 +5,7 @@ import Cart from "../components/Cart";
 import Help from "../components/Help";
 import Offers from "../components/Offers";
 import RestaurantMenu from "../components/RestaurantMenu";
+import CollectionsCategories from "../components/CollectionsCategories";
 function Routing() {
   return (
     <>
@@ -14,6 +15,7 @@ function Routing() {
         <Route path="/offers" element={<Offers />} />
         <Route path="/help" element={<Help />} />
         <Route path="/restaurant/:resId" element={<RestaurantMenu />} />
+        <Route path="/categories" element={<CollectionsCategories />} />
       </Routes>
     </>
   );

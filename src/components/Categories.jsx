@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../redux/slices/DataSlice";
+import { Link } from "react-router-dom";
 
 function CategoriesComp({}) {
   const dispatch = useDispatch();
@@ -48,7 +49,13 @@ function CategoriesComp({}) {
             {categories.map((catges) => {
               {
                 return (
-                  <img key={catges.id} src={baseUrl + catges.imageId} alt="" />
+                  <Link to={`/categories`}>
+                    <img
+                      key={catges.id}
+                      src={baseUrl + catges.imageId}
+                      alt=""
+                    />
+                  </Link>
                 );
               }
             })}

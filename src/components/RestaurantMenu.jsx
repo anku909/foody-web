@@ -8,6 +8,7 @@ function RestaurantMenu() {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.data);
   let [resData, setResData] = useState([]);
+
   useEffect(() => {
     dispatch(fetchData());
   }, []);

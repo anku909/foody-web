@@ -41,9 +41,8 @@ function AllCards({ visible, setVisible }) {
     if (searchName.length !== 0) {
       setFilteredRestaurants(searchName);
     } else {
-      setFilteredRestaurants();
+      setFilteredRestaurants(filteredRestaurants);
     }
-    console.log(searchName);
   };
 
   const handlefitlerOptions = () => {
