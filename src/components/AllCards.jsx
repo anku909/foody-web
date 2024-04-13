@@ -19,10 +19,10 @@ function AllCards({ visible, setVisible }) {
   useEffect(() => {
     if (
       data &&
-      data.data &&
-      data.data.data &&
-      data.data.data.cards[4] &&
-      data.data.data.cards[4].card.card
+      data?.data &&
+      data?.data?.data &&
+      data?.data?.data?.cards[4] &&
+      data?.data?.data?.cards[4]?.card?.card
     ) {
       const restaurants =
         data?.data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle

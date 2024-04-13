@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const fetchData = createAsyncThunk(
   "fetchAllData",
-  async (url = "http://localhost:3000/api/v1") => {
+  async (url = "https://proxy-server-alpha-eosin.vercel.app/api/v1") => {
     try {
       const json = await axios.get(url);
       return json.data;
