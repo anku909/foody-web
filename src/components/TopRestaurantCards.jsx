@@ -12,8 +12,16 @@ function TopRestaurant() {
     dispatch(fetchData());
   }, []);
   useEffect(() => {
-    if (data && data.data) {
-      const restaurantsData = data.data.topCards || [];
+    if (
+      data &&
+      data.data &&
+      data.data.data &&
+      data.data.data.cards[1] &&
+      data.data.data.cards[1].card.card
+    ) {
+      const restaurantsData =
+        data?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants || [];
       setRestaurantslist(restaurantsData);
     }
   }, [data]);

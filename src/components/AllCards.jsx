@@ -17,8 +17,16 @@ function AllCards({ visible, setVisible }) {
   }, []);
 
   useEffect(() => {
-    if (data && data.data) {
-      const restaurants = data?.data?.allResList || [];
+    if (
+      data &&
+      data.data &&
+      data.data.data &&
+      data.data.data.cards[4] &&
+      data.data.data.cards[4].card.card
+    ) {
+      const restaurants =
+        data?.data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants || [];
       setRestaurants(restaurants);
       setFilteredRestaurants(restaurants);
     }
@@ -74,8 +82,8 @@ function AllCards({ visible, setVisible }) {
         </button>
       </div>
       <div className="all-cards-section">
-        {filteredRestaurants.map((resData) => (
-          <RestaurantCard resdata={resData} key={resData.info.id} />
+        {filteredRestaurants.map((res) => (
+          <RestaurantCard resdata={res} key={res.info.id} />
         ))}
       </div>
     </>

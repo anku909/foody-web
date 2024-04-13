@@ -14,8 +14,15 @@ function CategoriesComp({}) {
   }, []);
 
   useEffect(() => {
-    if (data && data.data) {
-      const categoriesData = data?.data?.categories?.info || [];
+    if (
+      data &&
+      data.data &&
+      data.data.data &&
+      data.data.data.cards[0] &&
+      data.data.data.cards[0].card.card
+    ) {
+      const categoriesData =
+        data?.data?.data?.cards[0]?.card?.card?.imageGridCards?.info || [];
       setCategories(categoriesData);
     }
   }, [data]);
