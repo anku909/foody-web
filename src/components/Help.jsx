@@ -7,7 +7,7 @@ function Help() {
 
   return (
     <>
-      <div className="help-comp w-full min-h-[120vh] bg-cyan-700 xl:px-80 xl:pt-14">
+      <div className="help-comp w-full min-h-[120vh] bg-[#0a5d31c1] xl:px-80 xl:pt-14">
         <div className="help-comp-heading w-full h-[140px] xl:mt-[50px] flex flex-col justify-start xl:px-20">
           <h3 className="heading-text font-medium xl:text-5xl text-white xl:pt-5">
             Help & Support

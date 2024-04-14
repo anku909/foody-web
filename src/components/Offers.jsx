@@ -4,7 +4,13 @@ function Offers() {
   return (
     <>
       <div className="offers w-full h-screen bg-white px-80 pt-24">
-        <div className="offers-body-container cart-container w-full h-screen"></div>
+        <div className="offers-body-container cart-container w-full h-screen border-[1px]  border-[#d5d3d3] opacity-90 flex items-center justify-center">
+          <div className="msg w-1/2 h-1/2  flex items-center justify-center  bg-[#0a5d31c1]">
+            <h1 className="text-3xl text-white font-mono">
+              Work In Progress...
+            </h1>
+          </div>
+        </div>
       </div>
     </>
   );

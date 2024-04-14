@@ -8,7 +8,7 @@ function SignIn({ handleSignIn }) {
   };
   return (
     <>
-      <div className="signIn w-full h-screen fixed z-50  overflow-hidden">
+      <div className="signIn w-full h-screen fixed z-50  overflow-hidden ">
         <div className="blackScreen w-full h-screen bg-[#282c3f] opacity-70 fixed"></div>
         <div className="whiteArea xl:w-[38%] xl:h-[1000px] bg-white absolute right-0 pl-10">
           <div className="close-btn-container w-full h-[50px] ">
