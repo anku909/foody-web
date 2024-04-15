@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../redux/slices/DataSlice";
 import { useParams } from "react-router-dom";
+import CategoreyAccordian from "./CategoreyAccordian";
 
 function RestaurantMenu() {
   const { resId } = useParams();
@@ -9,31 +10,37 @@ function RestaurantMenu() {
   const data = useSelector((state) => state.data);
   let [resData, setResData] = useState([]);
 
-  const target_url = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6542&lng=77.2373&restaurantId=${resId}&catalog_qa=undefined&isMenuUx4=true&submitAction=ENTER`;
+  const target_url = `https://proxy-server-alpha-eosin.vercel.app/api/v1/restaurantmenu/${resId}`;
   useEffect(() => {
     dispatch(fetchData(target_url));
   }, []);
   useEffect(() => {
-    if (data && data?.data && data?.data?.data?.cards) {
-      const restaurants = data?.data?.data?.cards || [];
+    if (data && data?.data && data?.data?.data && data?.data?.data?.cards) {
+      const restaurants = data?.data?.data?.cards || {};
       setResData(restaurants);
     }
   }, [data]);
-  console.log(data?.data?.data?.cards);
+
+  const categoriesData =
+    data?.data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+      (c) =>
+        c.card?.["card"]?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
 
   const { name, costForTwoMessage, cuisines, avgRatingString, areaName, sla } =
     resData[2]?.card?.card?.info || {};
 
   return (
     <>
-      <div className="restaurant-menu w-full min-h-screen py-20 px-[30rem]   ">
-        <div className="restaurant-menu-container w-full h-screen bg-white pt-20 ">
+      <div className="restaurant-menu w-full min-h-screen pt-12 px-[30rem]   ">
+        <div className="restaurant-menu-container w-full bg-white pt-20 ">
           <div className="w-full h-[33%] rounded-md">
             <div className="w-full pt-1  ">
               <h1 className="text-4xl h-12 opacity-80 font-mono">{name} </h1>
-              <div className="line w-full h-[3px] bg-[#ececec65] mt-2"></div>
+              <div className="line w-full h-[3px] bg-[#ecececb0] mt-2"></div>
             </div>
-            <div className="menu-restaurant-details w-full h-full rounded-t-md rounded-b-3xl bg-gradient-to-t from-stone-200  px-10 py-6 mt-6">
+            <div className="menu-restaurant-details w-full h-full rounded-t-md rounded-b-[35px] bg-gradient-to-t from-[#049d4b83] px-10 py-6 mt-6">
               <div className="inside-content w-full h-full bg-white rounded-2xl border-[1px] border-[#919191a1] px-6 py-6">
                 <div className="details-section w-full h-[15%] flex gap-4">
                   <i className="ri-star-fill text-[#0a5d31c1] text-xl">
@@ -42,7 +49,7 @@ function RestaurantMenu() {
                   <h2 className="text-lg font-semibold">{costForTwoMessage}</h2>
                 </div>
                 <div className="cuisines w-full h-6 mt-3 ">
-                  <span className="text-md text-[#0a5d31c1] font-semibold cursor-pointer underline">
+                  <span className="text-md text-[#088120eb] font-semibold cursor-pointer underline">
                     {cuisines?.join(" ,")}
                   </span>
                 </div>
@@ -64,6 +71,16 @@ function RestaurantMenu() {
             </div>
           </div>
         </div>
+        <div className="line w-full h-[3px] bg-[#e8e8e8] mt-14"></div>
+        <div className="menu-text bg-[#f2f2f2] h-12 mt-10 mb-10">
+          <h1 className="text-3xl font-bold opacity-60 text-center py-2 ">
+            MENU
+          </h1>
+        </div>
+        {categoriesData &&
+          categoriesData.map((category, index) => (
+            <CategoreyAccordian key={index} data={category?.card?.card} />
+          ))}
       </div>
     </>
   );
