@@ -309,6 +309,63 @@
     gap: 12px;
   }
 }
+.body .top-cards-container .cards-section .shimmer-card {
+  position: relative;
+  filter: drop-shadow(4px 6px 2px rgb(231, 231, 231));
+  background-color: #fff;
+  border-radius: 16px;
+  width: 18vw;
+  height: 35vh;
+  overflow: hidden;
+  margin-top: 15px;
+}
+.body .top-cards-container .cards-section .shimmer-card .shimmerBG {
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: #ddd;
+  background: linear-gradient(to right, rgba(242, 242, 242, 0.8941176471) 8%, #f0f0f0 18%, rgba(238, 237, 237, 0.8078431373) 33%);
+  background-size: 1200px 100%;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}
+.body .top-cards-container .cards-section .shimmer-card .media {
+  height: 60%;
+}
+.body .top-cards-container .cards-section .shimmer-card .details {
+  padding: 10px 5px;
+}
+.body .top-cards-container .cards-section .shimmer-card .title {
+  height: 20px;
+  width: 80%;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+.body .top-cards-container .cards-section .shimmer-card .content {
+  height: 20px;
+  width: 40%;
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
+.body .top-cards-container .cards-section .shimmer-card .cuisines {
+  width: 90%;
+  height: 20px;
+  border-radius: 5px;
+}
+.body .top-cards-container .cards-section .shimmer-card .location {
+  width: 70%;
+  margin-top: 10px;
+  height: 20px;
+  border-radius: 8px;
+}
 .body .top-cards-container .cards-section .card {
   width: 18vw;
   height: 35vh;
@@ -634,6 +691,64 @@
     gap: 11px;
   }
 }
+.body .all-cards-section .shimmer-card {
+  position: relative;
+  filter: drop-shadow(4px 6px 2px rgb(231, 231, 231));
+  background-color: #fff;
+  border-radius: 16px;
+  width: 24%;
+  height: 39vh;
+  overflow: hidden;
+  margin-top: 15px;
+}
+.body .all-cards-section .shimmer-card .shimmerBG {
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: #ddd;
+  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+  background-size: 1200px 100%;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}
+.body .all-cards-section .shimmer-card .media {
+  height: 218px;
+}
+.body .all-cards-section .shimmer-card .details {
+  padding: 15px 5px;
+}
+.body .all-cards-section .shimmer-card .title {
+  height: 20px;
+  width: 80%;
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
+.body .all-cards-section .shimmer-card .content {
+  height: 20px;
+  width: 40%;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+.body .all-cards-section .shimmer-card .cuisines {
+  width: 90%;
+  height: 20px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.body .all-cards-section .shimmer-card .location {
+  width: 70%;
+  margin-top: 10px;
+  height: 20px;
+  border-radius: 8px;
+}
 .body .all-cards-section .card {
   width: 24%;
   height: 39vh;
@@ -643,6 +758,7 @@
   overflow: hidden;
   transition: scale 0.1s;
   filter: drop-shadow(4px 6px 2px rgb(231, 231, 231));
+  border: 1px solid rgb(240, 240, 240);
 }
 @media screen and (max-width: 460px) {
   .body .all-cards-section .card {

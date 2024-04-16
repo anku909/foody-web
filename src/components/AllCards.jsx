@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../redux/slices/DataSlice";
-import { Link } from "react-router-dom";
+import Shimmer from "./Shimmer";
 
 function AllCards({ visible, setVisible }) {
   const dispatch = useDispatch();
@@ -11,6 +11,7 @@ function AllCards({ visible, setVisible }) {
   const [listOfRestaurants, setRestaurants] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     dispatch(fetchData());
@@ -29,6 +30,7 @@ function AllCards({ visible, setVisible }) {
           ?.restaurants || [];
       setRestaurants(restaurants);
       setFilteredRestaurants(restaurants);
+      setIsLoading(false);
     }
   }, [data]);
 
@@ -53,9 +55,9 @@ function AllCards({ visible, setVisible }) {
     }
   };
 
-  const handlefitlerOptions = () => {
-    setVisible(!visible);
-  };
+  // const handlefitlerOptions = () => {
+  //   setVisible(!visible);
+  // };
 
   return (
     <>
@@ -68,12 +70,12 @@ function AllCards({ visible, setVisible }) {
             placeholder="Search Here"
           />
         </div>
-        <button onClick={handlefitlerOptions} className="filter-options-btn">
+        <button onClick="" className="filter-options-btn">
           Filter
         </button>
-        {visible && (
+        {/* {visible && (
           <FilterOptionsPopup visible={visible} setVisible={setVisible} />
-        )}
+        )} */}
         <button
           onClick={handlesortDeliveryTime}
           className="fast-delivery-sort-button"
@@ -82,9 +84,13 @@ function AllCards({ visible, setVisible }) {
         </button>
       </div>
       <div className="all-cards-section">
-        {filteredRestaurants.map((res) => (
-          <RestaurantCard resdata={res} key={res.info.id} />
-        ))}
+        {isLoading
+          ? Array.from({ length: 12 }).map((_, index) => (
+              <Shimmer key={index} />
+            ))
+          : filteredRestaurants.map((res) => (
+              <RestaurantCard resdata={res} key={res.info.id} />
+            ))}
       </div>
     </>
   );

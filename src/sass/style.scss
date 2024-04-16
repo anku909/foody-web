@@ -285,6 +285,83 @@
         min-width: 600vw;
         gap: 12px;
       }
+      .shimmer-card {
+        position: relative;
+        filter: drop-shadow(4px 6px 2px rgb(231, 231, 231));
+        background-color: #fff;
+        border-radius: 16px;
+        width: 18vw;
+        height: 35vh;
+        overflow: hidden;
+        margin-top: 15px;
+        .shimmerBG {
+          animation-duration: 2.2s;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+          animation-name: shimmer;
+          animation-timing-function: linear;
+          background: #ddd;
+          background: linear-gradient(
+            to right,
+            #f2f2f2e4 8%,
+            #f0f0f0 18%,
+            #eeededce 33%
+          );
+          background-size: 1200px 100%;
+        }
+
+        @-webkit-keyframes shimmer {
+          0% {
+            background-position: -100% 0;
+          }
+          100% {
+            background-position: 100% 0;
+          }
+        }
+
+        @keyframes shimmer {
+          0% {
+            background-position: -1200px 0;
+          }
+          100% {
+            background-position: 1200px 0;
+          }
+        }
+
+        .media {
+          height: 60%;
+        }
+
+        .details {
+          padding: 10px 5px;
+        }
+
+        .title {
+          height: 20px;
+          width: 80%;
+          margin-bottom: 5px;
+          border-radius: 10px;
+        }
+
+        .content {
+          height: 20px;
+          width: 40%;
+          margin-bottom: 5px;
+          border-radius: 8px;
+        }
+
+        .cuisines {
+          width: 90%;
+          height: 20px;
+          border-radius: 5px;
+        }
+        .location {
+          width: 70%;
+          margin-top: 10px;
+          height: 20px;
+          border-radius: 8px;
+        }
+      }
       .card {
         width: 18vw;
         height: 35vh;
@@ -326,6 +403,7 @@
           }
         }
       }
+
       .details-section {
         display: flex;
         justify-content: space-between;
@@ -583,6 +661,86 @@
       margin-bottom: 50px;
       gap: 11px;
     }
+
+    .shimmer-card {
+      position: relative;
+      filter: drop-shadow(4px 6px 2px rgb(231, 231, 231));
+      background-color: #fff;
+      border-radius: 16px;
+      width: 24%;
+      height: 39vh;
+      overflow: hidden;
+      margin-top: 15px;
+      .shimmerBG {
+        animation-duration: 2.2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: shimmer;
+        animation-timing-function: linear;
+        background: #ddd;
+        background: linear-gradient(
+          to right,
+          #f6f6f6 8%,
+          #f0f0f0 18%,
+          #f6f6f6 33%
+        );
+        background-size: 1200px 100%;
+      }
+
+      @-webkit-keyframes shimmer {
+        0% {
+          background-position: -100% 0;
+        }
+        100% {
+          background-position: 100% 0;
+        }
+      }
+
+      @keyframes shimmer {
+        0% {
+          background-position: -1200px 0;
+        }
+        100% {
+          background-position: 1200px 0;
+        }
+      }
+
+      .media {
+        height: 218px;
+      }
+
+      .details {
+        padding: 15px 5px;
+      }
+
+      .title {
+        height: 20px;
+        width: 80%;
+        margin-bottom: 5px;
+        border-radius: 8px;
+      }
+
+      .content {
+        height: 20px;
+        width: 40%;
+        margin-bottom: 8px;
+        border-radius: 8px;
+      }
+
+      .cuisines {
+        width: 90%;
+        height: 20px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+      }
+      .location {
+        width: 70%;
+        margin-top: 10px;
+        height: 20px;
+        border-radius: 8px;
+      }
+    }
+
     .card {
       width: 24%;
       height: 39vh;
@@ -592,6 +750,7 @@
       overflow: hidden;
       transition: scale 0.1s;
       filter: drop-shadow(4px 6px 2px rgb(231, 231, 231));
+      border: 1px solid rgb(240, 240, 240);
       @include mobile {
         width: 48%;
         height: 30vh;
