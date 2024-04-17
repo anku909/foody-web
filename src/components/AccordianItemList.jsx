@@ -1,17 +1,16 @@
 import React from "react";
 
 function AccordianItemList({ itemCards }) {
-  console.log(itemCards);
   let imgaeBaseURL =
     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
   return (
     <>
       <div className="items-container w-full  ">
-        {itemCards.map((card, index) => (
+        {itemCards.map((card) => (
           <div className="items-cards ">
             <div className="line w-full h-[2px] bg-[#dededecc] mt-4"></div>
             <div
-              key={index}
+              key={card?.card?.info?.name}
               className="w-full h-48  mt-3 flex justify-between items-start px-2 "
             >
               <div className="details mt-8">

@@ -1,9 +1,19 @@
 import React, { useState } from "react";
 import { faqs, partnerOnBoarding } from "../data/accordionData";
-import PartnerAccordion from "./partnerAccordion";
+import AccordianHelp from "./AccordionHelp";
 
 function Help() {
-  const [partnerdata, setPartnerData] = useState(partnerOnBoarding);
+  const [partnerToggle, setPartnerToggle] = useState(true);
+  const [faqsToggle, setFaqsToggle] = useState(false);
+
+  function handleTogglePartner() {
+    setPartnerToggle(true);
+    setFaqsToggle(false);
+  }
+  function handleToggleFaqs() {
+    setPartnerToggle(false);
+    setFaqsToggle(true);
+  }
 
   return (
     <>
@@ -17,19 +27,45 @@ function Help() {
           </p>
         </div>
         <div className="help-body-container  w-full min-h-[700px] bg-white rounded-sm xl:px-12 xl:py-16 flex">
-          <div className="categories-section sticky bg-slate-400 xl:w-72 xl:h-[800px] rounded-sm xl:pl-6 xl:py-10 flex flex-col items-start">
-            <div className="inside-div w-full xl:min-h-[65px] bg-white flex justify-center items-center">
-              <h4 className="xl:text-lg font-medium">partner Onboarding</h4>
+          <div
+            className={`categories-section sticky bg-slate-400 xl:w-72 xl:min-h-[550px] rounded-sm xl:pl-6 xl:py-10 flex flex-col items-start`}
+          >
+            <div
+              className={`inside-div w-full xl:min-h-[65px] flex justify-center items-center p ${
+                partnerToggle ? "bg-white" : ""
+              }`}
+            >
+              <h4
+                onClick={handleTogglePartner}
+                className="xl:text-lg font-medium cursor-pointer"
+              >
+                partner Onboarding
+              </h4>
             </div>
-            <div className="inside-div w-full xl:min-h-[65px] bg-gray-500 flex justify-center items-center">
-              <h4 className="xl:text-lg font-medium">FAQs</h4>
+            <div
+              className={`inside-div w-full xl:min-h-[65px]  flex justify-center items-center ${
+                faqsToggle ? "bg-white" : ""
+              }`}
+            >
+              <h4
+                onClick={handleToggleFaqs}
+                className="xl:text-lg font-medium cursor-pointer"
+              >
+                FAQs
+              </h4>
             </div>
           </div>
-          <div className="suggestion-helps w-full  xl:min-h-[600px] xl:px-10 xl:py-14 bg-pink-400 ">
-            <h3 className="font-semibold xl:text-2xl">Partner Onboarding</h3>
-            {partnerdata.map((elem) => (
-              <PartnerAccordion key={elem.id} {...elem} />
-            ))}
+          <div className="suggestion-helps w-full  xl:min-h-[550px] xl:px-10 xl:py-14 ">
+            {partnerToggle ? (
+              <h3 className="font-semibold xl:text-2xl">Partner Onboarding</h3>
+            ) : (
+              <h3 className="font-semibold xl:text-2xl">FAQs</h3>
+            )}
+            {partnerToggle
+              ? partnerOnBoarding.map((elem) => (
+                  <AccordianHelp key={elem.id} {...elem} />
+                ))
+              : faqs.map((elem) => <AccordianHelp key={elem.id} {...elem} />)}
           </div>
         </div>
       </div>

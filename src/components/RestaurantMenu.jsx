@@ -22,12 +22,13 @@ function RestaurantMenu() {
   }, [data]);
 
   const categoriesData =
-    data?.data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+    data?.data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
       (c) =>
         c.card?.["card"]?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
+  console.log(categoriesData);
   const { name, costForTwoMessage, cuisines, avgRatingString, areaName, sla } =
     resData[2]?.card?.card?.info || {};
 

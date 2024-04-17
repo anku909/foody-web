@@ -6,6 +6,7 @@ function CategoreyAccordian(data) {
   const handleShowItem = () => {
     setShowItem(!showItem);
   };
+
   return (
     <>
       <div className="itmes-accordian w-full mt-6 b px-6 rounded-lg">

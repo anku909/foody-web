@@ -6,7 +6,6 @@ export const fetchData = createAsyncThunk(
   async (url = "https://proxy-server-alpha-eosin.vercel.app/api/v1") => {
     try {
       const json = await axios.get(url);
-      console.log(json.data);
       return json.data;
     } catch (error) {
       console.log(error.message);
