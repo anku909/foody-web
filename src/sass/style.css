@@ -1014,7 +1014,7 @@
 @media screen and (max-width: 460px) {
   .help-comp {
     width: 100%;
-    min-height: 200vh;
+    min-height: 100vh;
     padding: 50px, 20px;
   }
 }
@@ -1036,29 +1036,85 @@
 }
 @media screen and (max-width: 460px) {
   .help-comp .help-body-container {
-    padding-left: 15px;
-    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 15px 10px;
   }
 }
 @media screen and (max-width: 460px) {
   .help-comp .help-body-container .categories-section {
-    width: 70px;
-    min-height: 600px;
+    width: 100px;
     padding-top: 10px;
-    padding-left: 5px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .help-comp .help-body-container .categories-section .inside-div {
+    width: 90px;
+    height: 40px;
+    margin-left: 10px;
   }
 }
 @media screen and (max-width: 460px) {
   .help-comp .help-body-container .categories-section .inside-div h4 {
     font-size: 8px;
-    text-wrap: wrap;
+  }
+}
+@media screen and (max-width: 460px) {
+  .help-comp .help-body-container .suggestion-helps {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .help-comp .help-body-container .suggestion-helps h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .accordion-div {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .accordion-div .query-1 .title {
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .accordion-div .more-text-on-click-section {
+    background-color: white;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) {
+  .accordion-div .more-text-on-click-section h5 {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .accordion-div .more-text-on-click-section p {
+    font-size: 8px;
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) {
+  .accordion-div .more-text-on-click-section .options button {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+}
+@media screen and (max-width: 460px) and (max-width: 460px) {
+  .accordion-div .more-text-on-click-section .options p {
+    font-size: 6px;
   }
 }
 
 @media screen and (max-width: 460px) {
   .signIn {
     width: 100%;
-    height: 70vh;
+    height: 100vh;
   }
 }
 @media screen and (max-width: 460px) {
@@ -1070,32 +1126,54 @@
     top: 50%;
   }
 }
+@media screen and (max-width: 460px) and (max-width: 460px) {
+  .signIn .whiteArea {
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 50vh;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    padding: 10px 40px;
+  }
+}
 @media screen and (max-width: 460px) {
   .signIn .whiteArea .close-btn-container {
-    width: 50%;
-    position: absolute;
-    left: 150px;
-    height: 30px;
+    width: 10%;
+    height: 40px;
   }
 }
 @media screen and (max-width: 460px) {
   .signIn .whiteArea .close-btn-container button {
-    font-size: 23px;
-    padding-top: 0;
+    margin-left: -6px;
+    margin-top: 2px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .signIn .whiteArea .close-btn-container button i {
+    font-size: 40px;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 460px) {
+  .signIn .whiteArea .signIn-signUp-container {
+    width: 100%;
+    height: 85%;
   }
 }
 @media screen and (max-width: 460px) and (max-width: 460px) {
   .signIn .whiteArea .signIn-signUp-container .heading-container {
-    width: 60%;
-    height: 60px;
+    width: 100%;
+    height: 120px;
+    padding-right: 10px;
   }
 }
 @media screen and (max-width: 460px) and (max-width: 460px) {
   .signIn .whiteArea .signIn-signUp-container .heading-container .heading-txt h4 {
-    font-size: 20px;
+    font-size: 30px;
   }
   .signIn .whiteArea .signIn-signUp-container .heading-container .heading-txt p {
-    font-size: 6px;
+    font-size: 11px;
     margin-top: 0px;
   }
 }
@@ -1103,12 +1181,12 @@
   .signIn .whiteArea .signIn-signUp-container .heading-container .heading-txt .line {
     width: 14px;
     height: 1px;
-    margin-top: 4px;
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 460px) and (max-width: 460px) {
   .signIn .whiteArea .signIn-signUp-container .heading-container img {
-    width: 55px;
+    width: 120px;
   }
 }
 @media screen and (max-width: 460px) and (max-width: 460px) {
@@ -1118,41 +1196,41 @@
 }
 @media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
   .signIn .whiteArea .signIn-signUp-container .login-function .input-box {
-    width: 130px;
-    height: 30px;
+    width: 95%;
+    height: 60px;
   }
 }
 @media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
   .signIn .whiteArea .signIn-signUp-container .login-function .input-box input {
-    width: 110px;
-    height: 15px;
+    width: 90%;
+    height: 60%;
     margin-left: 15px;
-    margin-top: 10px;
+    margin-top: 23px;
   }
 }
 @media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
   .signIn .whiteArea .signIn-signUp-container .login-function .input-box label {
-    font-size: 6px;
-    top: -2px;
+    font-size: 14px;
+    top: 5px;
     left: 15px;
   }
 }
 @media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
   .signIn .whiteArea .signIn-signUp-container .login-function .login-btn button {
-    padding: 2px 50px;
+    padding: 7px 40%;
     margin-top: 15px;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 500;
   }
 }
 @media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
   .signIn .whiteArea .signIn-signUp-container .login-function .term-conditions {
-    width: 80%;
-    margin-top: 0px;
+    width: 95%;
+    margin-top: 1px;
   }
 }
 @media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
   .signIn .whiteArea .signIn-signUp-container .login-function .term-conditions p {
-    font-size: 4px;
+    font-size: 9px;
   }
 }/*# sourceMappingURL=style.css.map */

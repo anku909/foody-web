@@ -976,7 +976,7 @@
 .help-comp {
   @include mobile {
     width: 100%;
-    min-height: 200vh;
+    min-height: 100vh;
     padding: 50px, 20px;
   }
   .help-comp-heading {
@@ -997,24 +997,78 @@
   }
   .help-body-container {
     @include mobile {
-      padding-left: 15px;
-      padding-top: 20px;
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      padding: 15px 10px;
     }
     .categories-section {
       @include mobile {
-        width: 70px;
-        min-height: 600px;
+        width: 100px;
         padding-top: 10px;
-        padding-left: 5px;
       }
 
       .inside-div {
         @include mobile {
+          width: 90px;
+          height: 40px;
+          margin-left: 10px;
         }
         h4 {
           @include mobile {
             font-size: 8px;
-            text-wrap: wrap;
+          }
+        }
+      }
+    }
+    .suggestion-helps {
+      @include mobile {
+        width: 80%;
+      }
+      h3 {
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.accordion-div {
+  @include mobile {
+    width: 100%;
+  }
+  .query-1 {
+    .title {
+      @include mobile {
+        font-size: 9px;
+        font-weight: 400;
+        line-height: 14px;
+      }
+    }
+  }
+  .more-text-on-click-section {
+    @include mobile {
+      background-color: white;
+      h5 {
+        @include mobile {
+          font-size: 12px;
+        }
+      }
+      p {
+        font-size: 8px;
+        margin-top: 5px;
+      }
+      .options {
+        button {
+          @include mobile {
+            font-size: 10px;
+            padding: 2px 6px;
+          }
+        }
+        p {
+          @include mobile {
+            font-size: 6px;
           }
         }
       }
@@ -1025,7 +1079,7 @@
 .signIn {
   @include mobile {
     width: 100%;
-    height: 70vh;
+    height: 100vh;
   }
   .whiteArea {
     @include mobile {
@@ -1034,37 +1088,53 @@
       padding-left: 15px;
       position: absolute;
       top: 50%;
+      @include mobile {
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: 50vh;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+        padding: 10px 40px;
+      }
     }
     .close-btn-container {
       @include mobile {
-        width: 50%;
-        position: absolute;
-        left: 150px;
-        height: 30px;
+        width: 10%;
+        height: 40px;
       }
 
       button {
         @include mobile {
-          font-size: 23px;
-          padding-top: 0;
+          margin-left: -6px;
+          margin-top: 2px;
+        }
+        i {
+          @include mobile {
+            font-size: 40px;
+            margin-top: 0;
+          }
         }
       }
     }
 
     .signIn-signUp-container {
       @include mobile {
+        width: 100%;
+        height: 85%;
         .heading-container {
           @include mobile {
-            width: 60%;
-            height: 60px;
+            width: 100%;
+            height: 120px;
+            padding-right: 10px;
           }
           .heading-txt {
             @include mobile {
               h4 {
-                font-size: 20px;
+                font-size: 30px;
               }
               p {
-                font-size: 6px;
+                font-size: 11px;
                 margin-top: 0px;
               }
             }
@@ -1072,13 +1142,13 @@
               .line {
                 width: 14px;
                 height: 1px;
-                margin-top: 4px;
+                margin-top: 10px;
               }
             }
           }
           img {
             @include mobile {
-              width: 55px;
+              width: 120px;
             }
           }
         }
@@ -1088,21 +1158,21 @@
             padding-top: 20px;
             .input-box {
               @include mobile {
-                width: 130px;
-                height: 30px;
+                width: 95%;
+                height: 60px;
               }
               input {
                 @include mobile {
-                  width: 110px;
-                  height: 15px;
+                  width: 90%;
+                  height: 60%;
                   margin-left: 15px;
-                  margin-top: 10px;
+                  margin-top: 23px;
                 }
               }
               label {
                 @include mobile {
-                  font-size: 6px;
-                  top: -2px;
+                  font-size: 14px;
+                  top: 5px;
                   left: 15px;
                 }
               }
@@ -1111,9 +1181,9 @@
               @include mobile {
                 button {
                   @include mobile {
-                    padding: 2px 50px;
+                    padding: 7px 40%;
                     margin-top: 15px;
-                    font-size: 10px;
+                    font-size: 14px;
                     font-weight: 500;
                   }
                 }
@@ -1121,12 +1191,12 @@
             }
             .term-conditions {
               @include mobile {
-                width: 80%;
-                margin-top: 0px;
+                width: 95%;
+                margin-top: 1px;
               }
               p {
                 @include mobile {
-                  font-size: 4px;
+                  font-size: 9px;
                 }
               }
             }
