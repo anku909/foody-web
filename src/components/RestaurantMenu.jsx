@@ -8,7 +8,8 @@ function RestaurantMenu() {
   const { resId } = useParams();
   const dispatch = useDispatch();
   const data = useSelector((state) => state.data);
-  let [resData, setResData] = useState([]);
+  const [resData, setResData] = useState([]);
+  const [showIndex, setShowIndex] = useState(0);
 
   const target_url = `https://proxy-server-alpha-eosin.vercel.app/api/v1/restaurantmenu/${resId}`;
   useEffect(() => {
@@ -28,9 +29,12 @@ function RestaurantMenu() {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
-  console.log(categoriesData);
   const { name, costForTwoMessage, cuisines, avgRatingString, areaName, sla } =
     resData[2]?.card?.card?.info || {};
+
+  const handleAccordionClick = (index) => {
+    setShowIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
 
   return (
     <>
@@ -80,7 +84,12 @@ function RestaurantMenu() {
         </div>
         {categoriesData &&
           categoriesData.map((category, index) => (
-            <CategoreyAccordian key={index} data={category?.card?.card} />
+            <CategoreyAccordian
+              key={index}
+              data={category?.card?.card}
+              showItem={showIndex === index}
+              setShowIndex={() => handleAccordionClick(index)}
+            />
           ))}
       </div>
     </>

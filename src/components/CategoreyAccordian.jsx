@@ -1,23 +1,18 @@
 import React, { useState } from "react";
 import AccordianItemList from "./AccordianItemList";
 
-function CategoreyAccordian(data) {
-  const [showItem, setShowItem] = useState(true);
+function CategoreyAccordian({ data, showItem, setShowIndex }) {
   const handleShowItem = () => {
-    setShowItem(!showItem);
+    setShowIndex();
   };
-
   return (
     <>
-      <div className="itmes-accordian w-full mt-6 b px-6 rounded-lg">
-        <div className="flex justify-between">
-          <h1 className="text-xl ">
-            {data.data.title} <span>({data.data.itemCards.length})</span>
+      <div className="itmes-accordian w-full mt-6 b px-6 rounded-lg ">
+        <div onClick={handleShowItem} className="flex justify-between">
+          <h1 className="text-xl font-semibold">
+            {data.title} <span>({data.itemCards.length})</span>
           </h1>
-          <h4
-            className="cursor-pointer font-semibold text-xl"
-            onClick={handleShowItem}
-          >
+          <h4 className="cursor-pointer font-semibold text-xl">
             {showItem ? (
               <i class="ri-arrow-up-s-line"></i>
             ) : (
@@ -26,7 +21,7 @@ function CategoreyAccordian(data) {
           </h4>
         </div>
         <div className=" w-full flex justify-center  ">
-          {showItem && <AccordianItemList itemCards={data.data.itemCards} />}
+          {showItem && <AccordianItemList itemCards={data.itemCards} />}
         </div>
         <div className="bottom-border w-full h-3 bg-[#c7c7c775] mt-3"></div>
       </div>
