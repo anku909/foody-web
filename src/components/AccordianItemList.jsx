@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addItem } from "../redux/slices/CartSlice";
 
 function AccordianItemList({ itemCards }) {
+  const dispatch = useDispatch();
+  const handleAdd = (card) => {
+    dispatch(addItem(card));
+  };
+
   let imgaeBaseURL =
     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
   return (
     <>
-      <div className="items-container w-full  ">
+      <div className="items-container w-full ">
         {itemCards.map((card, index) => (
           <div className="items-cards " key={card?.card?.info?.name + index}>
             <div className="line w-full h-[2px] bg-[#dededecc] mt-4 "></div>
@@ -40,7 +47,10 @@ function AccordianItemList({ itemCards }) {
                     alt=""
                   />
                 </div>
-                <button className="add-item absolute bg-[#2f792f] px-8 py-2 rounded-lg text-white bottom-[-5px] left-[34px] font-semibold ">
+                <button
+                  onClick={() => handleAdd(card)}
+                  className="add-item absolute bg-[#2f792f] px-8 py-2 rounded-lg text-white bottom-[-5px] left-[34px] font-semibold "
+                >
                   Add
                 </button>
               </div>
