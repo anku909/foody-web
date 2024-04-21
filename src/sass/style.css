@@ -61,14 +61,16 @@
 .header .nav-items ul span {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-right: 5rem;
+  justify-content: start;
+  margin-right: 1rem;
   font-weight: 500;
   font-size: 1.2rem;
+  width: 120px;
 }
 @media screen and (max-width: 460px) {
   .header .nav-items ul span {
-    margin-right: 0.6rem;
+    width: 50px;
+    margin-right: 0.2rem;
     font-size: 0.55rem;
   }
 }
@@ -315,9 +317,17 @@
   background-color: #fff;
   border-radius: 16px;
   width: 18vw;
-  height: 35vh;
+  height: 34vh;
   overflow: hidden;
   margin-top: 15px;
+}
+@media screen and (max-width: 460px) {
+  .body .top-cards-container .cards-section .shimmer-card {
+    width: 40vw;
+    height: 26vh;
+    border-radius: 8px;
+    filter: drop-shadow(0px 2px 2px rgb(230, 229, 229));
+  }
 }
 .body .top-cards-container .cards-section .shimmer-card .shimmerBG {
   animation-duration: 2.2s;
@@ -341,7 +351,12 @@
   height: 60%;
 }
 .body .top-cards-container .cards-section .shimmer-card .details {
-  padding: 10px 5px;
+  padding: 10px 4px;
+}
+@media screen and (max-width: 460px) {
+  .body .top-cards-container .cards-section .shimmer-card .details {
+    padding: 4px;
+  }
 }
 .body .top-cards-container .cards-section .shimmer-card .title {
   height: 20px;
@@ -349,22 +364,51 @@
   margin-bottom: 5px;
   border-radius: 10px;
 }
+@media screen and (max-width: 460px) {
+  .body .top-cards-container .cards-section .shimmer-card .title {
+    height: 10px;
+    width: 90%;
+    margin-bottom: 3px;
+  }
+}
 .body .top-cards-container .cards-section .shimmer-card .content {
   height: 20px;
   width: 40%;
   margin-bottom: 5px;
   border-radius: 8px;
 }
+@media screen and (max-width: 460px) {
+  .body .top-cards-container .cards-section .shimmer-card .content {
+    height: 20px;
+    width: 40%;
+    margin-bottom: 3px;
+  }
+}
 .body .top-cards-container .cards-section .shimmer-card .cuisines {
   width: 90%;
   height: 20px;
   border-radius: 5px;
+}
+@media screen and (max-width: 460px) {
+  .body .top-cards-container .cards-section .shimmer-card .cuisines {
+    height: 14px;
+    width: 90%;
+    margin-bottom: 3px;
+  }
 }
 .body .top-cards-container .cards-section .shimmer-card .location {
   width: 70%;
   margin-top: 10px;
   height: 20px;
   border-radius: 8px;
+}
+@media screen and (max-width: 460px) {
+  .body .top-cards-container .cards-section .shimmer-card .location {
+    height: 12px;
+    width: 90%;
+    margin-bottom: 3px;
+    margin-top: 1px;
+  }
 }
 .body .top-cards-container .cards-section .card {
   width: 18vw;
@@ -412,7 +456,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding-left: 3px;
+  padding-left: 5px;
   padding-top: 10px;
 }
 @media screen and (max-width: 460px) {
@@ -701,6 +745,14 @@
   overflow: hidden;
   margin-top: 15px;
 }
+@media screen and (max-width: 460px) {
+  .body .all-cards-section .shimmer-card {
+    width: 48%;
+    height: 30vh;
+    border-radius: 8px;
+    filter: drop-shadow(0px 4px 4px rgb(231, 231, 231));
+  }
+}
 .body .all-cards-section .shimmer-card .shimmerBG {
   animation-duration: 2.2s;
   animation-fill-mode: forwards;
@@ -722,8 +774,18 @@
 .body .all-cards-section .shimmer-card .media {
   height: 218px;
 }
+@media screen and (max-width: 460px) {
+  .body .all-cards-section .shimmer-card .media {
+    height: 130px;
+  }
+}
 .body .all-cards-section .shimmer-card .details {
   padding: 15px 5px;
+}
+@media screen and (max-width: 460px) {
+  .body .all-cards-section .shimmer-card .details {
+    padding: 8px 5px;
+  }
 }
 .body .all-cards-section .shimmer-card .title {
   height: 20px;
@@ -731,11 +793,27 @@
   margin-bottom: 5px;
   border-radius: 8px;
 }
+@media screen and (max-width: 460px) {
+  .body .all-cards-section .shimmer-card .title {
+    height: 14px;
+    width: 90%;
+    margin-bottom: 3px;
+    border-radius: 8px;
+  }
+}
 .body .all-cards-section .shimmer-card .content {
   height: 20px;
   width: 40%;
   margin-bottom: 8px;
   border-radius: 8px;
+}
+@media screen and (max-width: 460px) {
+  .body .all-cards-section .shimmer-card .content {
+    height: 20px;
+    width: 40%;
+    margin-bottom: 3px;
+    border-radius: 8px;
+  }
 }
 .body .all-cards-section .shimmer-card .cuisines {
   width: 90%;
@@ -743,11 +821,28 @@
   border-radius: 8px;
   margin-bottom: 8px;
 }
+@media screen and (max-width: 460px) {
+  .body .all-cards-section .shimmer-card .cuisines {
+    height: 16px;
+    width: 90%;
+    margin-bottom: 5px;
+    border-radius: 8px;
+  }
+}
 .body .all-cards-section .shimmer-card .location {
   width: 70%;
   margin-top: 10px;
   height: 20px;
   border-radius: 8px;
+}
+@media screen and (max-width: 460px) {
+  .body .all-cards-section .shimmer-card .location {
+    height: 14px;
+    width: 90%;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    margin-top: 4px;
+  }
 }
 .body .all-cards-section .card {
   width: 24%;
@@ -932,7 +1027,6 @@
 
 .cart .cart-container {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 @media screen and (max-width: 460px) {
@@ -1009,6 +1103,103 @@
     font-size: 11px;
     filter: drop-shadow(0px 2px 5px rgb(159, 159, 159));
     margin-top: 12px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .cart .cart-container .outer-wrraper .heading-section {
+    width: 80vw;
+    height: 40px;
+    margin-top: 50px;
+    border-radius: 5px;
+  }
+}
+.cart .cart-container .outer-wrraper .carts-details {
+  background-color: pink;
+}
+@media screen and (max-width: 460px) {
+  .cart .cart-container .outer-wrraper .carts-details {
+    padding: 0px 4px;
+  }
+  .cart .cart-container .outer-wrraper .carts-details h4 {
+    font-size: 15px;
+  }
+  .cart .cart-container .outer-wrraper .carts-details button {
+    padding: 2px 8px;
+    border-radius: 5px;
+    border: 1px solid red;
+    color: black;
+  }
+}
+.cart .cart-container .outer-wrraper .cart-items-list {
+  background-color: pink;
+}
+@media screen and (max-width: 460px) {
+  .cart .cart-container .items-container .items-cards .inner-section {
+    margin-top: 10px;
+    padding: 0 4px;
+  }
+}
+.cart .cart-container .items-container .items-cards .inner-section .details {
+  padding-top: 2px;
+}
+@media screen and (max-width: 460px) {
+  .cart .cart-container .items-container .items-cards .inner-section .details h2 {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .cart .cart-container .items-container .items-cards .inner-section .details p {
+    font-size: 8px;
+  }
+}
+.cart .cart-container .items-container .items-cards .inner-section .details .rating i {
+  font-size: 12px;
+}
+.cart .cart-container .items-container .items-cards .inner-section .details .description {
+  margin-top: 2px;
+}
+@media screen and (max-width: 460px) {
+  .cart .cart-container .items-container .items-cards .inner-section .details .description {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .cart .cart-container .items-container .items-cards .inner-section .details .description p {
+    font-size: 8px;
+    line-height: 10px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .cart .cart-container .items-container .items-cards .inner-section .img-section-right {
+    width: 100vw;
+    height: 16vh;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+  }
+}
+@media screen and (max-width: 460px) {
+  .cart .cart-container .items-container .items-cards .inner-section .img-section-right .img-section {
+    margin-top: 10px;
+    width: 85%;
+    height: 80%;
+    border-radius: 12px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .cart .cart-container .items-container .items-cards .inner-section .img-section-right .img-section img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .cart .cart-container .items-container .items-cards .inner-section .img-section-right button {
+    padding: 2px 20px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 3px;
+    left: 35px;
+    border-radius: 5px;
   }
 }
 
@@ -1233,5 +1424,22 @@
 @media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
   .signIn .whiteArea .signIn-signUp-container .login-function .term-conditions p {
     font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .offers {
+    padding: 50px 20px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .offers .offers-body-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .offers .offers-body-container .msg {
+    width: 80%;
   }
 }/*# sourceMappingURL=style.css.map */

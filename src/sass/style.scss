@@ -57,12 +57,14 @@
       span {
         display: flex;
         align-items: center;
-        justify-content: center;
-        margin-right: 5rem;
+        justify-content: start;
+        margin-right: 1rem;
         font-weight: 500;
         font-size: 1.2rem;
+        width: 120px;
         @include mobile {
-          margin-right: 0.6rem;
+          width: 50px;
+          margin-right: 0.2rem;
           font-size: 0.55rem;
         }
 
@@ -291,9 +293,15 @@
         background-color: #fff;
         border-radius: 16px;
         width: 18vw;
-        height: 35vh;
+        height: 34vh;
         overflow: hidden;
         margin-top: 15px;
+        @include mobile {
+          width: 40vw;
+          height: 26vh;
+          border-radius: 8px;
+          filter: drop-shadow(0px 2px 2px rgb(230, 229, 229));
+        }
         .shimmerBG {
           animation-duration: 2.2s;
           animation-fill-mode: forwards;
@@ -333,7 +341,10 @@
         }
 
         .details {
-          padding: 10px 5px;
+          padding: 10px 4px;
+          @include mobile {
+            padding: 4px;
+          }
         }
 
         .title {
@@ -341,6 +352,11 @@
           width: 80%;
           margin-bottom: 5px;
           border-radius: 10px;
+          @include mobile {
+            height: 10px;
+            width: 90%;
+            margin-bottom: 3px;
+          }
         }
 
         .content {
@@ -348,18 +364,34 @@
           width: 40%;
           margin-bottom: 5px;
           border-radius: 8px;
+          @include mobile {
+            height: 20px;
+            width: 40%;
+            margin-bottom: 3px;
+          }
         }
 
         .cuisines {
           width: 90%;
           height: 20px;
           border-radius: 5px;
+          @include mobile {
+            height: 14px;
+            width: 90%;
+            margin-bottom: 3px;
+          }
         }
         .location {
           width: 70%;
           margin-top: 10px;
           height: 20px;
           border-radius: 8px;
+          @include mobile {
+            height: 12px;
+            width: 90%;
+            margin-bottom: 3px;
+            margin-top: 1px;
+          }
         }
       }
       .card {
@@ -408,7 +440,7 @@
         display: flex;
         justify-content: space-between;
         position: relative;
-        padding-left: 3px;
+        padding-left: 5px;
         padding-top: 10px;
         @include mobile {
           padding-top: 5px;
@@ -671,6 +703,12 @@
       height: 39vh;
       overflow: hidden;
       margin-top: 15px;
+      @include mobile {
+        width: 48%;
+        height: 30vh;
+        border-radius: 8px;
+        filter: drop-shadow(0px 4px 4px rgb(231, 231, 231));
+      }
       .shimmerBG {
         animation-duration: 2.2s;
         animation-fill-mode: forwards;
@@ -707,10 +745,16 @@
 
       .media {
         height: 218px;
+        @include mobile {
+          height: 130px;
+        }
       }
 
       .details {
         padding: 15px 5px;
+        @include mobile {
+          padding: 8px 5px;
+        }
       }
 
       .title {
@@ -718,6 +762,12 @@
         width: 80%;
         margin-bottom: 5px;
         border-radius: 8px;
+        @include mobile {
+          height: 14px;
+          width: 90%;
+          margin-bottom: 3px;
+          border-radius: 8px;
+        }
       }
 
       .content {
@@ -725,6 +775,12 @@
         width: 40%;
         margin-bottom: 8px;
         border-radius: 8px;
+        @include mobile {
+          height: 20px;
+          width: 40%;
+          margin-bottom: 3px;
+          border-radius: 8px;
+        }
       }
 
       .cuisines {
@@ -732,12 +788,25 @@
         height: 20px;
         border-radius: 8px;
         margin-bottom: 8px;
+        @include mobile {
+          height: 16px;
+          width: 90%;
+          margin-bottom: 5px;
+          border-radius: 8px;
+        }
       }
       .location {
         width: 70%;
         margin-top: 10px;
         height: 20px;
         border-radius: 8px;
+        @include mobile {
+          height: 14px;
+          width: 90%;
+          margin-bottom: 4px;
+          border-radius: 8px;
+          margin-top: 4px;
+        }
       }
     }
 
@@ -904,7 +973,6 @@
 .cart {
   .cart-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     @include mobile {
       padding-top: 20px;
@@ -968,6 +1036,111 @@
           font-size: 11px;
           filter: drop-shadow(0px 2px 5px rgb(159, 159, 159));
           margin-top: 12px;
+        }
+      }
+    }
+
+    .outer-wrraper {
+      .heading-section {
+        @include mobile {
+          width: 80vw;
+          height: 40px;
+          margin-top: 50px;
+          border-radius: 5px;
+        }
+      }
+      .carts-details {
+        background-color: pink;
+        @include mobile {
+          padding: 0px 4px;
+          h4 {
+            font-size: 15px;
+          }
+          button {
+            padding: 2px 8px;
+            border-radius: 5px;
+            border: 1px solid red;
+            color: black;
+          }
+        }
+      }
+      .cart-items-list {
+        background-color: pink;
+      }
+    }
+    .items-container {
+      .items-cards {
+        @include mobile {
+        }
+        .inner-section {
+          @include mobile {
+            margin-top: 10px;
+            padding: 0 4px;
+          }
+          .details {
+            padding-top: 2px;
+            h2 {
+              @include mobile {
+                font-size: 10px;
+              }
+            }
+            p {
+              @include mobile {
+                font-size: 8px;
+              }
+            }
+            .rating {
+              i {
+                font-size: 12px;
+              }
+            }
+
+            .description {
+              margin-top: 2px;
+              @include mobile {
+                width: 90%;
+              }
+              p {
+                @include mobile {
+                  font-size: 8px;
+                  line-height: 10px;
+                }
+              }
+            }
+          }
+          .img-section-right {
+            @include mobile {
+              width: 100vw;
+              height: 16vh;
+              display: flex;
+              justify-content: end;
+              align-items: start;
+            }
+            .img-section {
+              @include mobile {
+                margin-top: 10px;
+                width: 85%;
+                height: 80%;
+                border-radius: 12px;
+              }
+              img {
+                @include mobile {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+            button {
+              @include mobile {
+                padding: 2px 20px;
+                font-size: 12px;
+                position: absolute;
+                bottom: 3px;
+                left: 35px;
+                border-radius: 5px;
+              }
+            }
+          }
         }
       }
     }
@@ -1203,6 +1376,36 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+.restaurant-menu {
+  @include mobile {
+  }
+  .restaurant-menu-container {
+    @include mobile {
+    }
+    .top-details-container {
+      @include mobile {
+      }
+    }
+  }
+}
+
+.offers {
+  @include mobile {
+    padding: 50px 20px;
+  }
+  .offers-body-container {
+    @include mobile {
+      width: 100%;
+      height: 100%;
+    }
+    .msg {
+      @include mobile {
+        width: 80%;
       }
     }
   }

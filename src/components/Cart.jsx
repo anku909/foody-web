@@ -8,24 +8,40 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const items = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  console.log(cartItems.length);
+
+  useEffect(() => {
+    const storedCartItems = localStorage.getItem("cartItems");
+    if (storedCartItems) {
+      setCartItems(JSON.parse(storedCartItems));
+    }
+  }, [setCartItems]);
+
   useEffect(() => {
     setCartItems(items);
   }, [items]);
+
+  // Update localStorage whenever cart items change
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+
   const handleClearCart = () => {
     dispatch(clearCart());
+    localStorage.removeItem("cartItems");
   };
-  useEffect(() => {
-    handleClearCart;
-  }, [handleClearCart]);
+
   const navigate = useNavigate();
   function navigateToHome() {
     navigate("/");
   }
   return (
     <>
-      <div className="cart w-full h-screen  xl:bg-white xl:px-80 xl:pt-24 z-40">
-        <div className="cart-container w-full min-h-screen px:20 flex flex-col justify-center items-center ">
+      <div className="cart w-full h-screen  xl:bg-white xl:px-80 xl:pt-24 z-40 ">
+        <div
+          className={`cart-container w-full min-h-[80vh]  flex flex-col ${
+            cartItems.length > 0 ? "" : "justify-center"
+          }`}
+        >
           <div
             className={`cart-empty ${cartItems.length > 0 ? "hidden" : "flex"}`}
           >
@@ -40,17 +56,17 @@ const Cart = () => {
             <button onClick={navigateToHome}>See Restaurants</button>
           </div>
           {cartItems.length > 0 ? (
-            <div>
-              <div className="bg-zinc-300 w-[53vw] h-[50px] flex items-center justify-center rounded-lg">
-                <h2 className="text-center text-2xl font-bold">CART</h2>
+            <div className="outer-wrraper">
+              <div className="heading-section bg-zinc-300 xl:w-[53vw] xl:h-[50px] flex items-center justify-center rounded-lg">
+                <h2 className=" text-center text-2xl font-bold">CART</h2>
               </div>
-              <div className="w-[53vw] h-10 mt-5 flex justify-between items-center px-4">
+              <div className="carts-details xl:w-[53vw] h-10 mt-5 flex justify-between items-center xl:px-4">
                 <h4 className="text-xl font-semibold opacity-70 ">
                   Total Items ({cartItems.length})
                 </h4>
                 <button
                   onClick={handleClearCart}
-                  className="text-lg px-4 py-[2px] bg-red-600 rounded-md text-center font-semibold text-white"
+                  className="xl:text-lg xl:px-4 xl:py-[2px] xl:bg-red-600 xl:rounded-md text-center font-semibold text-white"
                 >
                   clear cart
                 </button>
@@ -59,7 +75,7 @@ const Cart = () => {
           ) : (
             ""
           )}
-          <div className="w-[80%]">
+          <div className="cart-items-list w-[80%]">
             <AccordianItemList itemCards={cartItems} />
           </div>
         </div>

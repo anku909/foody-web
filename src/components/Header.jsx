@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 
 function Header({ handleSignIn }) {
   const cartData = useSelector((state) => state.cart);
+
+  const cartLength = cartData ? cartData.length : 0;
   // console.log(cartData);
   return (
     <>
@@ -35,7 +37,7 @@ function Header({ handleSignIn }) {
             <span>
               <NavLink className="navlink" to="/cart">
                 <i className="ri-shopping-bag-line"></i>
-                Cart {cartData.length > 0 ? `(${cartData.length})` : ""}
+                Cart {cartLength > 0 ? `(${cartLength})` : ""}
               </NavLink>
             </span>
           </ul>

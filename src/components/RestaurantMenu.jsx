@@ -38,14 +38,16 @@ function RestaurantMenu() {
 
   return (
     <>
-      <div className="restaurant-menu w-full min-h-screen pt-12 px-[30rem]   ">
-        <div className="restaurant-menu-container w-full bg-white pt-20 ">
-          <div className="w-full h-[33%] rounded-md">
-            <div className="w-full pt-1  ">
-              <h1 className="text-4xl h-12 opacity-80 font-mono">{name} </h1>
-              <div className="line w-full h-[3px] bg-[#ecececb0] mt-2"></div>
+      <div className="restaurant-menu w-full min-h-screen xl:pt-12 xl:px-[30rem]  ">
+        <div className="restaurant-menu-container w-full bg-white pt-20 bg-green-100">
+          <div className="top-details-container w-full xl:h-[33%] rounded-md bg-red-100">
+            <div className="w-full xl:pt-1 bg-blue-100 ">
+              <h1 className="xl:text-4xl xl:h-12 opacity-80 font-mono">
+                {name}{" "}
+              </h1>
+              <div className="line w-full xl:h-[3px] bg-[#ecececb0] mt-2"></div>
             </div>
-            <div className="menu-restaurant-details w-full h-full rounded-t-md rounded-b-[35px] bg-gradient-to-t from-[#049d4b83] px-10 py-6 mt-6">
+            <div className="menu-restaurant-details w-full h-full rounded-t-md rounded-b-[35px] bg-gradient-to-t from-[#049d4b83] xl:px-10 xl:py-6 xl:mt-6">
               <div className="inside-content w-full h-full bg-white rounded-2xl border-[1px] border-[#919191a1] px-6 py-6">
                 <div className="details-section w-full h-[15%] flex gap-4">
                   <i className="ri-star-fill text-[#0a5d31c1] text-xl">
