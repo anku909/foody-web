@@ -1050,22 +1050,24 @@
         }
       }
       .carts-details {
-        background-color: pink;
         @include mobile {
           padding: 0px 4px;
           h4 {
             font-size: 15px;
           }
           button {
-            padding: 2px 8px;
+            padding: 2px 10px;
             border-radius: 5px;
             border: 1px solid red;
             color: black;
+            font-size: 12px;
           }
         }
       }
-      .cart-items-list {
-        background-color: pink;
+    }
+    .cart-items-list {
+      @include mobile {
+        width: 80%;
       }
     }
     .items-container {
@@ -1078,7 +1080,11 @@
             padding: 0 4px;
           }
           .details {
-            padding-top: 2px;
+            @include mobile {
+              height: 100px;
+              width: 90%;
+              padding-top: 4px;
+            }
             h2 {
               @include mobile {
                 font-size: 10px;
@@ -1087,16 +1093,18 @@
             p {
               @include mobile {
                 font-size: 8px;
+                margin-top: 2px;
               }
             }
             .rating {
               i {
-                font-size: 12px;
+                font-size: 10px;
+                margin-top: 2px;
               }
             }
 
             .description {
-              margin-top: 2px;
+              margin-top: 3px;
               @include mobile {
                 width: 90%;
               }
@@ -1110,7 +1118,7 @@
           }
           .img-section-right {
             @include mobile {
-              width: 100vw;
+              width: 40%;
               height: 16vh;
               display: flex;
               justify-content: end;
@@ -1118,8 +1126,7 @@
             }
             .img-section {
               @include mobile {
-                margin-top: 10px;
-                width: 85%;
+                width: 90%;
                 height: 80%;
                 border-radius: 12px;
               }
@@ -1132,11 +1139,11 @@
             }
             button {
               @include mobile {
-                padding: 2px 20px;
-                font-size: 12px;
+                padding: 2px 14px;
+                font-size: 10px;
                 position: absolute;
-                bottom: 3px;
-                left: 35px;
+                bottom: 13px;
+                left: 34px;
                 border-radius: 5px;
               }
             }
@@ -1383,12 +1390,190 @@
 
 .restaurant-menu {
   @include mobile {
+    width: 100%;
+    padding: 0px 40px;
   }
   .restaurant-menu-container {
     @include mobile {
+      padding-top: 70px;
     }
     .top-details-container {
       @include mobile {
+        height: 40vh;
+      }
+      .name-section {
+        @include mobile {
+          padding-bottom: 10px;
+        }
+        h1 {
+          @include mobile {
+            font-size: 12px;
+          }
+        }
+      }
+      .menu-restaurant-details {
+        @include mobile {
+          width: 100%;
+          height: 76%;
+          padding: 20px 10px;
+          border-radius: 20px;
+        }
+        .inside-content {
+          @include mobile {
+            width: 100%;
+          }
+          .details-section {
+            @include mobile {
+              gap: 10px;
+              align-items: center;
+            }
+            i {
+              @include mobile {
+                font-size: 13px;
+              }
+              span {
+                @include mobile {
+                  font-size: 13px;
+                }
+              }
+            }
+            h2 {
+              @include mobile {
+                font-size: 12px;
+              }
+            }
+          }
+          .cuisines {
+            @include mobile {
+            }
+            span {
+              @include mobile {
+                font-size: 13px;
+              }
+            }
+          }
+          .delivery-details {
+            @include mobile {
+              gap: 6px;
+              margin-top: 4px;
+            }
+            .visual {
+              @include mobile {
+                height: 42px;
+                margin-top: 3px;
+              }
+            }
+            .details {
+              @include mobile {
+              }
+              h2 {
+                @include mobile {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .menu-upper-line {
+    @include mobile {
+      margin-top: 15px;
+    }
+  }
+  .items-accordion {
+    .items-accordion-details {
+      h1 {
+        @include mobile {
+          font-size: 13px;
+        }
+      }
+      h4 {
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .items-container {
+    .items-cards {
+      @include mobile {
+      }
+      .inner-section {
+        @include mobile {
+          margin-top: 10px;
+          padding: 0 4px;
+        }
+        .details {
+          @include mobile {
+            height: 100px;
+            width: 90%;
+            padding-top: 4px;
+          }
+          h2 {
+            @include mobile {
+              font-size: 10px;
+            }
+          }
+          p {
+            @include mobile {
+              font-size: 8px;
+              margin-top: 2px;
+            }
+          }
+          .rating {
+            i {
+              font-size: 10px;
+              margin-top: 2px;
+            }
+          }
+
+          .description {
+            margin-top: 3px;
+            @include mobile {
+              width: 90%;
+            }
+            p {
+              @include mobile {
+                font-size: 8px;
+                line-height: 10px;
+              }
+            }
+          }
+        }
+        .img-section-right {
+          @include mobile {
+            width: 40%;
+            height: 16vh;
+            display: flex;
+            justify-content: end;
+            align-items: start;
+          }
+          .img-section {
+            @include mobile {
+              width: 90%;
+              height: 80%;
+              border-radius: 12px;
+            }
+            img {
+              @include mobile {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          button {
+            @include mobile {
+              padding: 2px 14px;
+              font-size: 10px;
+              position: absolute;
+              bottom: 13px;
+              left: 35px;
+              border-radius: 5px;
+            }
+          }
+        }
       }
     }
   }

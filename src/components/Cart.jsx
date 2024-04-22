@@ -75,7 +75,7 @@ const Cart = () => {
           ) : (
             ""
           )}
-          <div className="cart-items-list w-[80%]">
+          <div className="cart-items-list xl:w-[80%]">
             <AccordianItemList itemCards={cartItems} />
           </div>
         </div>

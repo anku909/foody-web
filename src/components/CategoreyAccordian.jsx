@@ -7,12 +7,15 @@ function CategoreyAccordian({ data, showItem, setShowIndex }) {
   };
   return (
     <>
-      <div className="itmes-accordian w-full mt-6 b px-6 rounded-lg ">
-        <div onClick={handleShowItem} className="flex justify-between">
-          <h1 className="text-xl font-semibold">
+      <div className="items-accordion w-full mt-6 xl:px-6 rounded-lg">
+        <div
+          onClick={handleShowItem}
+          className=" items-accordion-details flex justify-between"
+        >
+          <h1 className="xl:text-xl font-semibold">
             {data.title} <span>({data.itemCards.length})</span>
           </h1>
-          <h4 className="cursor-pointer font-semibold text-xl">
+          <h4 className="cursor-pointer font-semibold xl:text-xl">
             {showItem ? (
               <i class="ri-arrow-up-s-line"></i>
             ) : (
