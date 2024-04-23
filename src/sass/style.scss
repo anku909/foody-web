@@ -1595,3 +1595,75 @@
     }
   }
 }
+
+.footer {
+  @include mobile {
+    height: 20vh;
+  }
+  .app-links {
+    @include mobile {
+      padding: 5px 60px;
+      h1 {
+        font-size: 8px;
+        line-height: 14px;
+      }
+    }
+    .image-section {
+      @include mobile {
+        img {
+          @include mobile {
+            width: 50px;
+          }
+        }
+      }
+    }
+  }
+  .footer-content {
+    @include mobile {
+      padding: 10px 30px;
+      gap: 16px;
+    }
+
+    .logo-section {
+      @include mobile {
+      }
+      .logo {
+        font-size: 35px;
+        transition: all 0.5s;
+        font-weight: 900;
+        color: transparent;
+        font-family: "Poppins";
+        -webkit-text-stroke: 2px rgb(236, 239, 232);
+        @include mobile {
+          font-size: 14px;
+          padding-top: 8px;
+          font-weight: 900;
+          color: transparent;
+          -webkit-text-stroke: 1px rgb(236, 239, 232);
+        }
+      }
+      .copyright {
+        @include mobile {
+          font-size: 6px;
+        }
+      }
+    }
+  }
+  .details-section {
+    @include mobile {
+      width: 30%;
+      height: 15vh;
+    }
+    h1 {
+      @include mobile {
+        font-size: 15px;
+        margin-bottom: -2px;
+      }
+    }
+    span {
+      @include mobile {
+        font-size: 7px;
+      }
+    }
+  }
+}

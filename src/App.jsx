@@ -6,6 +6,7 @@ import Routing from "./utils/Routing";
 import { Provider } from "react-redux";
 import store from "./redux/store.jsx";
 import SignIn from "./components/SignIn.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   const [Toggled, setToggled] = useState(false);
@@ -23,6 +24,7 @@ function App() {
         {Toggled && <SignIn handleSignIn={handleSignIn} />}
         <Header handleSignIn={handleSignIn} />
         <Routing />
+        <Footer />
       </Provider>
     </>
   );
