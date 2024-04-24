@@ -12,7 +12,7 @@ function AccordianItemList({ itemCards }) {
     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
   return (
     <>
-      <div className="items-container w-full ">
+      <div className="items-container w-full">
         {itemCards.map((card, index) => (
           <div className="items-cards " key={card?.card?.info?.name + index}>
             <div className="line w-full h-[2px] bg-[#dededecc] mt-4 "></div>

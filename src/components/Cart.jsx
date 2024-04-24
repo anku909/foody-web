@@ -36,7 +36,7 @@ const Cart = () => {
   }
   return (
     <>
-      <div className="cart w-full h-screen  xl:bg-white xl:px-80 xl:pt-24 z-40 ">
+      <div className="cart w-full min-h-screen  xl:bg-white xl:px-80 xl:pt-24 z-40 mb-12">
         <div
           className={`cart-container w-full min-h-[80vh]  flex flex-col ${
             cartItems.length > 0 ? "" : "justify-center"

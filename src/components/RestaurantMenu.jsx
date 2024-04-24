@@ -38,8 +38,8 @@ function RestaurantMenu() {
 
   return (
     <>
-      <div className="restaurant-menu w-full min-h-screen xl:pt-12 xl:px-[30rem] ">
-        <div className="restaurant-menu-container w-full bg-white xl:pt-20 bg-green-100">
+      <div className="restaurant-menu w-full min-h-screen xl:pt-12 xl:px-[30rem]  mb-14 ">
+        <div className="restaurant-menu-container w-full bg-white xl:pt-20">
           <div className="top-details-container w-full xl:h-[33%] rounded-md">
             <div className="name-section w-full xl:pt-1 ">
               <h1 className="xl:text-4xl xl:h-12 opacity-80 font-mono">
