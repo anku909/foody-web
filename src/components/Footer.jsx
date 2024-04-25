@@ -9,7 +9,7 @@ function Footer() {
         <div className="app-links w-full xl:h-28 bg-[#e7f2f3] flex justify-between items-center xl:px-[22vw]">
           <h1 className="text-4xl font-semibold ">
             {" "}
-            For better experience, downlaod <br /> the foody app now
+            For better experience, download <br /> the foody app now
           </h1>
           <div className="image-section flex justify-center gap-8 ">
             <img className="w-52 cursor-pointer" src={playStoreImg} alt="" />
