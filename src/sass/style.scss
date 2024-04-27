@@ -43,7 +43,7 @@
     margin-right: 8rem;
 
     @include mobile {
-      margin-right: 1.5rem;
+      margin-right: 1.2rem;
     }
     ul {
       display: flex;
@@ -168,8 +168,8 @@
         gap: 30px;
 
         @include mobile {
-          min-width: 450%;
-          gap: 10px;
+          min-width: 550%;
+          gap: 25px;
           height: 15vh;
         }
       }
@@ -184,8 +184,8 @@
           cursor: pointer;
         }
         @include mobile {
-          width: 100px;
-          height: 100px;
+          width: 80px;
+          height: 80px;
         }
       }
 
@@ -673,7 +673,7 @@
       font-size: 15px;
       cursor: pointer;
       @include mobile {
-        width: 40px;
+        width: 50px;
         height: 15px;
         font-size: 6px;
       }
@@ -1054,6 +1054,9 @@
           padding: 0px 4px;
           h4 {
             font-size: 15px;
+            @include mobile {
+              font-size: 10px;
+            }
           }
           button {
             padding: 2px 10px;
@@ -1061,6 +1064,9 @@
             border: 1px solid red;
             color: black;
             font-size: 12px;
+            @include mobile {
+              font-size: 10px;
+            }
           }
         }
       }
@@ -1084,6 +1090,17 @@
               height: 100px;
               width: 90%;
               padding-top: 4px;
+            }
+            .quantity-circle {
+              @include mobile {
+                width: 20px;
+                height: 20px;
+              }
+              span {
+                @include mobile {
+                  font-size: 8px;
+                }
+              }
             }
             h2 {
               @include mobile {
@@ -1110,7 +1127,7 @@
               }
               p {
                 @include mobile {
-                  font-size: 8px;
+                  font-size: 6px;
                   line-height: 10px;
                 }
               }
@@ -1123,12 +1140,13 @@
               display: flex;
               justify-content: end;
               align-items: start;
+              margin-top: 15px;
             }
             .img-section {
               @include mobile {
                 width: 90%;
-                height: 80%;
-                border-radius: 12px;
+                height: 70%;
+                border-radius: 10px;
               }
               img {
                 @include mobile {
@@ -1139,12 +1157,13 @@
             }
             button {
               @include mobile {
-                padding: 2px 14px;
-                font-size: 10px;
+                padding: 2px 8px;
+                font-size: 8px;
                 position: absolute;
-                bottom: 13px;
-                left: 34px;
-                border-radius: 5px;
+                bottom: 26px;
+                left: 55%;
+                transform: translateX(-50%);
+                border-radius: 20px;
               }
             }
           }
@@ -1387,6 +1406,136 @@
     }
   }
 }
+.signUp {
+  @include mobile {
+    width: 100%;
+    height: 100vh;
+  }
+  .whiteArea {
+    @include mobile {
+      width: 100%;
+      height: 100vh;
+      padding-left: 15px;
+      position: absolute;
+      top: 50%;
+      @include mobile {
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: 68vh;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+        padding: 10px 40px;
+      }
+    }
+    .close-btn-container {
+      @include mobile {
+        width: 10%;
+        height: 40px;
+      }
+
+      button {
+        @include mobile {
+          margin-left: -6px;
+          margin-top: 2px;
+        }
+        i {
+          @include mobile {
+            font-size: 40px;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .signIn-signUp-container {
+      @include mobile {
+        width: 100%;
+        height: 90%;
+        .heading-container {
+          @include mobile {
+            width: 100%;
+            height: 120px;
+            padding-right: 10px;
+          }
+          .heading-txt {
+            @include mobile {
+              h4 {
+                font-size: 30px;
+              }
+              p {
+                font-size: 11px;
+                margin-top: 0px;
+              }
+            }
+            @include mobile {
+              .line {
+                width: 14px;
+                height: 1px;
+                margin-top: 10px;
+              }
+            }
+          }
+          img {
+            @include mobile {
+              width: 120px;
+            }
+          }
+        }
+
+        .login-function {
+          @include mobile {
+            padding-top: 20px;
+            .input-box {
+              @include mobile {
+                width: 95%;
+                height: 60px;
+              }
+              input {
+                @include mobile {
+                  width: 90%;
+                  height: 60%;
+                  margin-left: 15px;
+                  margin-top: 23px;
+                }
+              }
+              label {
+                @include mobile {
+                  font-size: 14px;
+                  top: 5px;
+                  left: 15px;
+                }
+              }
+            }
+            .login-btn {
+              @include mobile {
+                button {
+                  @include mobile {
+                    padding: 7px 40%;
+                    margin-top: 15px;
+                    font-size: 14px;
+                    font-weight: 500;
+                  }
+                }
+              }
+            }
+            .term-conditions {
+              @include mobile {
+                width: 95%;
+                margin-top: 1px;
+              }
+              p {
+                @include mobile {
+                  font-size: 9px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 .restaurant-menu {
   @include mobile {
@@ -1414,8 +1563,9 @@
       .menu-restaurant-details {
         @include mobile {
           width: 100%;
-          height: 76%;
+          height: 75%;
           padding: 20px 10px;
+          padding-bottom: 30px;
           border-radius: 20px;
         }
         .inside-content {
@@ -1536,7 +1686,7 @@
             }
             p {
               @include mobile {
-                font-size: 8px;
+                font-size: 6px;
                 line-height: 10px;
               }
             }
@@ -1549,12 +1699,13 @@
             display: flex;
             justify-content: end;
             align-items: start;
+            margin-top: 5px;
           }
           .img-section {
             @include mobile {
               width: 90%;
-              height: 80%;
-              border-radius: 12px;
+              height: 70%;
+              border-radius: 10px;
             }
             img {
               @include mobile {
@@ -1565,12 +1716,13 @@
           }
           button {
             @include mobile {
-              padding: 2px 14px;
+              padding: 2px 16px;
               font-size: 10px;
               position: absolute;
-              bottom: 13px;
-              left: 35px;
-              border-radius: 5px;
+              bottom: 25px;
+              left: 55%;
+              border-radius: 20px;
+              transform: translateX(-50%);
             }
           }
         }
@@ -1602,7 +1754,7 @@
   }
   .app-links {
     @include mobile {
-      padding: 5px 60px;
+      padding: 5px 45px;
       h1 {
         font-size: 8px;
         line-height: 14px;
@@ -1621,11 +1773,12 @@
   .footer-content {
     @include mobile {
       padding: 10px 30px;
-      gap: 16px;
+      gap: 5px;
     }
 
     .logo-section {
       @include mobile {
+        margin-right: 25px;
       }
       .logo {
         font-size: 35px;
@@ -1656,7 +1809,7 @@
     }
     h1 {
       @include mobile {
-        font-size: 15px;
+        font-size: 10px;
         margin-bottom: -2px;
       }
     }

@@ -8,7 +8,6 @@ const Cart = () => {
   const [totalPrice, setTotalPrice] = useState(0);
   const items = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  console.log(cartItems);
   useEffect(() => {
     const storedCartItems = localStorage.getItem("cartItems");
     if (storedCartItems && storedCartItems) {
@@ -42,7 +41,6 @@ const Cart = () => {
       const price =
         item?.card?.info?.defaultPrice ?? item?.card?.info?.price ?? 0;
       const quantity = item.card.quantity ?? 1;
-      console.log(quantity);
       return total + price * quantity;
     }, 0);
     setTotalPrice(Math.floor(totalPriceInCents / 100));
@@ -59,8 +57,6 @@ const Cart = () => {
     }
     return acc;
   }, []);
-
-  console.log(groupedItems);
 
   let imgaeBaseURL =
     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
@@ -119,7 +115,7 @@ const Cart = () => {
                   <div className="line w-full h-[2px] bg-[#dededecc] mt-4 "></div>
                   <div className="inner-section w-full xl:h-48  xl:mt-1 flex justify-between items-start xl:px-2 ">
                     <div className="details xl:mt-5  xl:w-[70%] ">
-                      <div className="w-9 h-9 border-2 border-[#c2bdbd] rounded-full flex items-center justify-center">
+                      <div className="quantity-circle w-9 h-9 border-2 border-[#c2bdbd] rounded-full flex items-center justify-center">
                         <span className="text-sm font-semibold">
                           X {card.quantity}
                         </span>

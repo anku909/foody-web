@@ -16,7 +16,7 @@ function Footer() {
             <img className="w-52 cursor-pointer" src={appStoreImg} alt="" />
           </div>
         </div>
-        <div className="footer-content w-full xl:h-full bg-black flex xl:px-80 xl:gap-4 xl:py-10">
+        <div className="footer-content w-full xl:h-full bg-black flex xl:px-80 xl:gap-4 xl:py-10 ">
           <div className=" logo-section xl:w-1/3 xl:h-3/4 flex flex-col items-center">
             <span className="logo text-white xl:text-4xl ">Foody</span>
             <span className="copyright text-white xl:text-base xl:mt-2">
