@@ -15,7 +15,10 @@ function Routing() {
         <Route path="/offers" element={<Offers />} />
         <Route path="/help" element={<Help />} />
         <Route path="/restaurant/:resId" element={<RestaurantMenu />} />
-        <Route path="/categories" element={<CollectionsCategories />} />
+        <Route
+          path="/categories/:id/:type"
+          element={<CollectionsCategories />}
+        />
       </Routes>
     </>
   );

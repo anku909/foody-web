@@ -56,12 +56,13 @@ function CategoriesComp({}) {
             {categories.map((catges) => {
               {
                 return (
-                  <Link to={`/categories`}>
+                  <Link to={`/categories/${catges.id}/${catges.action.text}`}>
                     <img
                       key={catges.id}
                       src={baseUrl + catges.imageId}
                       alt=""
                     />
+                    {console.log(catges)}
                   </Link>
                 );
               }
