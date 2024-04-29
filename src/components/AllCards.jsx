@@ -14,7 +14,17 @@ function AllCards({ visible, setVisible }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    dispatch(fetchData());
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+    let apiUrl;
+    if (isMobile) {
+      apiUrl = "http://localhost:3000/api/v1/mobile";
+    } else {
+      apiUrl = "http://localhost:3000/api/v1/pc";
+    }
+    dispatch(fetchData(apiUrl));
   }, []);
 
   useEffect(() => {
@@ -33,6 +43,8 @@ function AllCards({ visible, setVisible }) {
       setIsLoading(false);
     }
   }, [data]);
+
+  console.log(data.data);
 
   const handlesortDeliveryTime = () => {
     const filterlist = listOfRestaurants.filter(

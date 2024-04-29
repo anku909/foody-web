@@ -1,17 +1,14 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const fetchData = createAsyncThunk(
-  "fetchAllData",
-  async (url = "https://proxy-server-alpha-eosin.vercel.app/api/v1") => {
-    try {
-      const json = await axios.get(url);
-      return json.data;
-    } catch (error) {
-      console.log(error.message);
-    }
+export const fetchData = createAsyncThunk("fetchAllData", async (url) => {
+  try {
+    const json = await axios.get(url);
+    return json.data;
+  } catch (error) {
+    console.log(error.message);
   }
-);
+});
 
 const DataSlice = createSlice({
   name: "allApiData",

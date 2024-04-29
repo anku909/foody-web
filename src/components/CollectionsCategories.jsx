@@ -8,14 +8,14 @@ function CollectionsCategories() {
   const data = useSelector((state) => state.data);
   const dispatch = useDispatch();
   const [collectionsData, setCollectionsData] = useState();
-  const { id, type } = useParams();
-  const Url = `http://localhost:3000/api/v1/collections/${id}/${type}`;
-  console.log(id);
+  const { type, id } = useParams();
+  console.log(type, id);
+  const Url = `http://localhost:3000/api/v1/collections/${type}/${id}`;
 
   useEffect(() => {
     dispatch(fetchData(Url));
   }, []);
-
+  console.log(collectionsData);
   useEffect(() => {
     if (data && data?.data && data?.data?.data) {
       const collections = data?.data?.data;

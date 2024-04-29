@@ -16,7 +16,7 @@ function Routing() {
         <Route path="/help" element={<Help />} />
         <Route path="/restaurant/:resId" element={<RestaurantMenu />} />
         <Route
-          path="/categories/:id/:type"
+          path="/categories/:type/:id"
           element={<CollectionsCategories />}
         />
       </Routes>
