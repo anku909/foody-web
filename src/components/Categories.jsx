@@ -9,7 +9,7 @@ function CategoriesComp({}) {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.data);
   const [categories, setCategories] = useState([]);
-  const url = "http://localhost:3000/api/v1/collections";
+  const url = "https://proxy-server-alpha-eosin.vercel.app/api/v1/collections";
   const [heading, setHeading] = useState(headingData[0].heading);
   const [currentHeadingIndex, setCurrentHeadingIndex] = useState(0);
 

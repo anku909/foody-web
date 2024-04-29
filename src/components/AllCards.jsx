@@ -20,9 +20,9 @@ function AllCards({ visible, setVisible }) {
       );
     let apiUrl;
     if (isMobile) {
-      apiUrl = "http://localhost:3000/api/v1/mobile";
+      apiUrl = "https://proxy-server-alpha-eosin.vercel.app/api/v1/mobile";
     } else {
-      apiUrl = "http://localhost:3000/api/v1/pc";
+      apiUrl = "https://proxy-server-alpha-eosin.vercel.app/api/v1/pc";
     }
     dispatch(fetchData(apiUrl));
   }, []);

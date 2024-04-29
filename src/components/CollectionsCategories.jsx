@@ -10,7 +10,7 @@ function CollectionsCategories() {
   const [collectionsData, setCollectionsData] = useState();
   const { type, id } = useParams();
   console.log(type, id);
-  const Url = `http://localhost:3000/api/v1/collections/${type}/${id}`;
+  const Url = `https://proxy-server-alpha-eosin.vercel.app/api/v1/collections/${type}/${id}`;
 
   useEffect(() => {
     dispatch(fetchData(Url));
