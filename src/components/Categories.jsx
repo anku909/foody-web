@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../redux/slices/DataSlice";
 import { Link } from "react-router-dom";
 import { headingData } from "../data/headingData";
+import loadingImg from "../assets/loading-logo.png";
 
 function CategoriesComp({}) {
   const dispatch = useDispatch();
@@ -12,6 +13,7 @@ function CategoriesComp({}) {
   const url = "https://proxy-server-alpha-eosin.vercel.app/api/v1/collections";
   const [heading, setHeading] = useState(headingData[0].heading);
   const [currentHeadingIndex, setCurrentHeadingIndex] = useState(0);
+  const [isLoading, setIsloading] = useState(true);
 
   useEffect(() => {
     dispatch(fetchData(url));
@@ -28,6 +30,7 @@ function CategoriesComp({}) {
       const categoriesData =
         data?.data?.data?.cards[0]?.card?.card?.imageGridCards?.info || [];
       setCategories(categoriesData);
+      setIsloading(false);
     }
   }, [data]);
 
@@ -84,38 +87,49 @@ function CategoriesComp({}) {
 
   return (
     <>
-      <div className="categories">
-        <div className="controls-text-area">
-          <h3>{heading}</h3>
-          <div className="controls">
-            <button onClick={handleSlideLeft} className="left-btn">
-              <i className="ri-arrow-left-s-line"></i>
-            </button>
-            <button onClick={handleSlideRight} className="right-btn">
-              <i className="ri-arrow-right-s-line"></i>
-            </button>
+      {isLoading ? (
+        <div className="categories-loading w-full h-[32vh] bg-[#0f5734d7] flex flex-col items-center justify-center">
+          <div className="circle w-28 h-28 rounded-full bg-[#f0ebeb] opacity-90 flex justify-center items-center">
+            <img src={loadingImg} width="100" alt="Food Transparent PNG" />
+          </div>
+          <h1 className="text-3xl font-semibold text-white">
+            Looking for greate food near you
+          </h1>
+        </div>
+      ) : (
+        <div className="categories">
+          <div className="controls-text-area">
+            <h3>{heading}</h3>
+            <div className="controls">
+              <button onClick={handleSlideLeft} className="left-btn">
+                <i className="ri-arrow-left-s-line"></i>
+              </button>
+              <button onClick={handleSlideRight} className="right-btn">
+                <i className="ri-arrow-right-s-line"></i>
+              </button>
+            </div>
+          </div>
+          <div className="categories-choices">
+            <div className="categories-scroll-div">
+              {categoriesWithUrlTags.map((catges) => {
+                {
+                  return (
+                    <Link
+                      to={`/categories/${catges.urlTags.tags}/${catges.urlTags.collectionId}`}
+                    >
+                      <img
+                        key={catges.category.id}
+                        src={baseUrl + catges.category.imageId}
+                        alt=""
+                      />
+                    </Link>
+                  );
+                }
+              })}
+            </div>
           </div>
         </div>
-        <div className="categories-choices">
-          <div className="categories-scroll-div">
-            {categoriesWithUrlTags.map((catges) => {
-              {
-                return (
-                  <Link
-                    to={`/categories/${catges.urlTags.tags}/${catges.urlTags.collectionId}`}
-                  >
-                    <img
-                      key={catges.category.id}
-                      src={baseUrl + catges.category.imageId}
-                      alt=""
-                    />
-                  </Link>
-                );
-              }
-            })}
-          </div>
-        </div>
-      </div>
+      )}
     </>
   );
 }

@@ -97,6 +97,7 @@
   .categories {
     width: 100%;
     height: 32vh;
+
     @include mobile {
       width: 100%;
       height: 22vh;
@@ -196,6 +197,27 @@
     }
   }
 
+  .categories-loading {
+    @include mobile {
+      width: 100%;
+      height: 16vh;
+      padding-top: 20px;
+      margin-bottom: 8px;
+    }
+    .circle {
+      @include mobile {
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
+      }
+    }
+    h1 {
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
+
   .line {
     width: 100%;
     height: 2px;
@@ -285,7 +307,7 @@
       justify-content: start;
       gap: 25px;
       @include mobile {
-        min-width: 700vw;
+        min-width: 800vw;
         gap: 12px;
       }
       .shimmer-card {
@@ -293,7 +315,7 @@
         filter: drop-shadow(4px 6px 2px rgb(231, 231, 231));
         background-color: #fff;
         border-radius: 16px;
-        width: 18vw;
+        width: 14vw;
         height: 34vh;
         overflow: hidden;
         margin-top: 15px;
