@@ -92,7 +92,7 @@ function CategoriesComp({}) {
           <div className="circle w-28 h-28 rounded-full bg-[#f0ebeb] opacity-90 flex justify-center items-center">
             <img src={loadingImg} width="100" alt="Food Transparent PNG" />
           </div>
-          <h1 className="text-3xl font-semibold text-white">
+          <h1 className="text-3xl font-semibold text-white mt-2">
             Looking for greate food near you
           </h1>
         </div>

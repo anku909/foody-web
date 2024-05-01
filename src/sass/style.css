@@ -1413,10 +1413,10 @@
 }
 @media screen and (max-width: 460px) and (max-width: 460px) {
   .signIn .whiteArea .signIn-signUp-container .heading-container .heading-txt h4 {
-    font-size: 30px;
+    font-size: 27px;
   }
   .signIn .whiteArea .signIn-signUp-container .heading-container .heading-txt p {
-    font-size: 11px;
+    font-size: 9px;
     margin-top: 0px;
   }
 }
@@ -1429,12 +1429,7 @@
 }
 @media screen and (max-width: 460px) and (max-width: 460px) {
   .signIn .whiteArea .signIn-signUp-container .heading-container img {
-    width: 120px;
-  }
-}
-@media screen and (max-width: 460px) and (max-width: 460px) {
-  .signIn .whiteArea .signIn-signUp-container .login-function {
-    padding-top: 20px;
+    width: 100px;
   }
 }
 @media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
@@ -1460,7 +1455,7 @@
 }
 @media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
   .signIn .whiteArea .signIn-signUp-container .login-function .login-btn button {
-    padding: 7px 40%;
+    padding: 7px 38%;
     margin-top: 15px;
     font-size: 14px;
     font-weight: 500;
@@ -1508,6 +1503,7 @@
   .signUp .whiteArea .close-btn-container {
     width: 10%;
     height: 40px;
+    margin-bottom: 2px;
   }
 }
 @media screen and (max-width: 460px) {
@@ -1537,10 +1533,10 @@
 }
 @media screen and (max-width: 460px) and (max-width: 460px) {
   .signUp .whiteArea .signIn-signUp-container .heading-container .heading-txt h4 {
-    font-size: 30px;
+    font-size: 27px;
   }
   .signUp .whiteArea .signIn-signUp-container .heading-container .heading-txt p {
-    font-size: 11px;
+    font-size: 9px;
     margin-top: 0px;
   }
 }
@@ -1553,12 +1549,7 @@
 }
 @media screen and (max-width: 460px) and (max-width: 460px) {
   .signUp .whiteArea .signIn-signUp-container .heading-container img {
-    width: 120px;
-  }
-}
-@media screen and (max-width: 460px) and (max-width: 460px) {
-  .signUp .whiteArea .signIn-signUp-container .login-function {
-    padding-top: 20px;
+    width: 100px;
   }
 }
 @media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
@@ -1584,7 +1575,7 @@
 }
 @media screen and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) and (max-width: 460px) {
   .signUp .whiteArea .signIn-signUp-container .login-function .login-btn button {
-    padding: 7px 40%;
+    padding: 7px 38%;
     margin-top: 15px;
     font-size: 14px;
     font-weight: 500;
@@ -1777,7 +1768,43 @@
   }
 }
 
-.collections .collections-inner-section .card {
+@media screen and (max-width: 460px) {
+  .collections {
+    padding: 60px 0px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .collections .collections-inner-section {
+    padding: 10px 16px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .collections .collections-inner-section .top-details-section h1 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .collections .collections-inner-section .top-details-section span {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .collections .collections-inner-section .cards-section {
+    margin-top: 16px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .collections .collections-inner-section .cards-section .heading {
+    margin-bottom: 10px;
+    padding-left: 6px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .collections .collections-inner-section .cards-section .heading h1 {
+    font-size: 18px;
+  }
+}
+.collections .collections-inner-section .cards-section .card {
   width: 18vw;
   height: 35vh;
   background-color: rgb(248, 248, 248);
@@ -1788,29 +1815,29 @@
   border: 1px solid rgb(240, 240, 240);
 }
 @media screen and (max-width: 460px) {
-  .collections .collections-inner-section .card {
+  .collections .collections-inner-section .cards-section .card {
     width: 40vw;
     height: 27vh;
     border-radius: 8px;
     filter: drop-shadow(0px 2px 2px rgb(230, 229, 229));
   }
 }
-.collections .collections-inner-section .card:hover {
+.collections .collections-inner-section .cards-section .card:hover {
   border: 1px solid rgb(228, 228, 228);
   scale: 0.97;
   cursor: pointer;
 }
-.collections .collections-inner-section .card .card-img {
+.collections .collections-inner-section .cards-section .card .card-img {
   width: 100%;
   height: 60%;
 }
 @media screen and (max-width: 460px) {
-  .collections .collections-inner-section .card .card-img {
+  .collections .collections-inner-section .cards-section .card .card-img {
     width: 100%;
     height: 60%;
   }
 }
-.collections .collections-inner-section .card .card-img img {
+.collections .collections-inner-section .cards-section .card .card-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1819,7 +1846,7 @@
      object-position: top, center;
   transition: all 0.3s ease-in;
 }
-.collections .collections-inner-section .details-section {
+.collections .collections-inner-section .cards-section .details-section {
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -1827,21 +1854,21 @@
   padding-top: 10px;
 }
 @media screen and (max-width: 460px) {
-  .collections .collections-inner-section .details-section {
+  .collections .collections-inner-section .cards-section .details-section {
     padding-top: 5px;
   }
 }
-.collections .collections-inner-section .details-section .text-details .name-div {
+.collections .collections-inner-section .cards-section .details-section .text-details .name-div {
   width: 250px;
   height: 30px;
 }
 @media screen and (max-width: 460px) {
-  .collections .collections-inner-section .details-section .text-details .name-div {
+  .collections .collections-inner-section .cards-section .details-section .text-details .name-div {
     width: 200px;
     height: 13px;
   }
 }
-.collections .collections-inner-section .details-section .text-details .name-div h3 {
+.collections .collections-inner-section .cards-section .details-section .text-details .name-div h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1849,68 +1876,68 @@
   font-weight: 600;
 }
 @media screen and (max-width: 460px) {
-  .collections .collections-inner-section .details-section .text-details .name-div h3 {
+  .collections .collections-inner-section .cards-section .details-section .text-details .name-div h3 {
     font-size: 0.5rem;
     font-weight: 500;
   }
 }
-.collections .collections-inner-section .details-section .text-details .stars-and-more {
+.collections .collections-inner-section .cards-section .details-section .text-details .stars-and-more {
   display: flex;
   justify-content: start;
   align-items: center;
 }
-.collections .collections-inner-section .details-section .text-details .stars-and-more span {
+.collections .collections-inner-section .cards-section .details-section .text-details .stars-and-more span {
   font-size: 16px;
   margin-right: 10px;
 }
 @media screen and (max-width: 460px) {
-  .collections .collections-inner-section .details-section .text-details .stars-and-more span {
+  .collections .collections-inner-section .cards-section .details-section .text-details .stars-and-more span {
     font-size: 0.6rem;
     margin-right: 2px;
   }
 }
-.collections .collections-inner-section .details-section .text-details .stars-and-more span i {
+.collections .collections-inner-section .cards-section .details-section .text-details .stars-and-more span i {
   font-size: 20px;
   margin-right: 2px;
   color: green;
 }
 @media screen and (max-width: 460px) {
-  .collections .collections-inner-section .details-section .text-details .stars-and-more span i {
+  .collections .collections-inner-section .cards-section .details-section .text-details .stars-and-more span i {
     font-size: 0.7rem;
     margin-right: 1px;
   }
 }
-.collections .collections-inner-section .details-section .text-details .stars-and-more p {
+.collections .collections-inner-section .cards-section .details-section .text-details .stars-and-more p {
   font-size: 1rem;
 }
 @media screen and (max-width: 460px) {
-  .collections .collections-inner-section .details-section .text-details .stars-and-more p {
+  .collections .collections-inner-section .cards-section .details-section .text-details .stars-and-more p {
     font-size: 0.6rem;
   }
 }
-.collections .collections-inner-section .details-section .text-details .stars-and-more p i {
+.collections .collections-inner-section .cards-section .details-section .text-details .stars-and-more p i {
   font-size: 20px;
   color: rgb(125, 127, 125);
 }
 @media screen and (max-width: 460px) {
-  .collections .collections-inner-section .details-section .text-details .stars-and-more p i {
+  .collections .collections-inner-section .cards-section .details-section .text-details .stars-and-more p i {
     font-size: 0.6rem;
     margin-right: 1px;
   }
 }
-.collections .collections-inner-section .details-section .text-details .types-div {
+.collections .collections-inner-section .cards-section .details-section .text-details .types-div {
   width: 250px;
   height: 20px;
   padding-top: 2px;
   margin-bottom: 5px;
 }
 @media screen and (max-width: 460px) {
-  .collections .collections-inner-section .details-section .text-details .types-div {
+  .collections .collections-inner-section .cards-section .details-section .text-details .types-div {
     padding: none;
     height: 12px;
   }
 }
-.collections .collections-inner-section .details-section .text-details .types-div p {
+.collections .collections-inner-section .cards-section .details-section .text-details .types-div p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1918,7 +1945,7 @@
   font-weight: 300;
 }
 @media screen and (max-width: 460px) {
-  .collections .collections-inner-section .details-section .text-details .types-div p {
+  .collections .collections-inner-section .cards-section .details-section .text-details .types-div p {
     font-size: 0.5rem;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1926,16 +1953,16 @@
     font-weight: 300;
   }
 }
-.collections .collections-inner-section .details-section .text-details .location-div {
+.collections .collections-inner-section .cards-section .details-section .text-details .location-div {
   width: 250px;
   height: 25px;
 }
 @media screen and (max-width: 460px) {
-  .collections .collections-inner-section .details-section .text-details .location-div {
+  .collections .collections-inner-section .cards-section .details-section .text-details .location-div {
     height: 15px;
   }
 }
-.collections .collections-inner-section .details-section .text-details .location-div h5 {
+.collections .collections-inner-section .cards-section .details-section .text-details .location-div h5 {
   font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
@@ -1945,7 +1972,7 @@
   color: rgb(92, 92, 92);
 }
 @media screen and (max-width: 460px) {
-  .collections .collections-inner-section .details-section .text-details .location-div h5 {
+  .collections .collections-inner-section .cards-section .details-section .text-details .location-div h5 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

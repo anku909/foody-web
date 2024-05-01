@@ -1354,10 +1354,10 @@
           .heading-txt {
             @include mobile {
               h4 {
-                font-size: 30px;
+                font-size: 27px;
               }
               p {
-                font-size: 11px;
+                font-size: 9px;
                 margin-top: 0px;
               }
             }
@@ -1371,14 +1371,13 @@
           }
           img {
             @include mobile {
-              width: 120px;
+              width: 100px;
             }
           }
         }
 
         .login-function {
           @include mobile {
-            padding-top: 20px;
             .input-box {
               @include mobile {
                 width: 95%;
@@ -1404,7 +1403,7 @@
               @include mobile {
                 button {
                   @include mobile {
-                    padding: 7px 40%;
+                    padding: 7px 38%;
                     margin-top: 15px;
                     font-size: 14px;
                     font-weight: 500;
@@ -1455,6 +1454,7 @@
       @include mobile {
         width: 10%;
         height: 40px;
+        margin-bottom: 2px;
       }
 
       button {
@@ -1484,10 +1484,10 @@
           .heading-txt {
             @include mobile {
               h4 {
-                font-size: 30px;
+                font-size: 27px;
               }
               p {
-                font-size: 11px;
+                font-size: 9px;
                 margin-top: 0px;
               }
             }
@@ -1501,14 +1501,13 @@
           }
           img {
             @include mobile {
-              width: 120px;
+              width: 100px;
             }
           }
         }
 
         .login-function {
           @include mobile {
-            padding-top: 20px;
             .input-box {
               @include mobile {
                 width: 95%;
@@ -1534,7 +1533,7 @@
               @include mobile {
                 button {
                   @include mobile {
-                    padding: 7px 40%;
+                    padding: 7px 38%;
                     margin-top: 15px;
                     font-size: 14px;
                     font-weight: 500;
@@ -1755,158 +1754,192 @@
 }
 
 .collections {
+  @include mobile {
+    padding: 60px 0px;
+  }
   .collections-inner-section {
-    .card {
-      width: 18vw;
-      height: 35vh;
-      background-color: rgb(248, 248, 248);
-      border-radius: 16px;
-      margin-top: 10px;
-      filter: drop-shadow(4px 4px 6px rgb(230, 229, 229));
-      overflow: hidden;
-      border: 1px solid rgb(240, 240, 240);
-
-      @include mobile {
-        width: 40vw;
-        height: 27vh;
-        border-radius: 8px;
-        filter: drop-shadow(0px 2px 2px rgb(230, 229, 229));
-      }
-      &:hover {
-        border: 1px solid rgb(228, 228, 228);
-        scale: 0.97;
-        cursor: pointer;
-      }
-
-      .card-img {
-        width: 100%;
-        height: 60%;
-
+    @include mobile {
+      padding: 10px 16px;
+    }
+    .top-details-section {
+      h1 {
         @include mobile {
-          width: 100%;
-          height: 60%;
+          font-size: 24px;
         }
-        // background-color: white;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: top, center;
-          transition: all 0.3s ease-in;
+      }
+      span {
+        @include mobile {
+          font-size: 10px;
         }
       }
     }
-
-    .details-section {
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-      padding-left: 5px;
-      padding-top: 10px;
+    .cards-section {
       @include mobile {
-        padding-top: 5px;
+        margin-top: 16px;
       }
-      // background-color: orange;
-      .text-details {
-        .name-div {
-          width: 250px;
-          height: 30px;
+      .heading {
+        @include mobile {
+          margin-bottom: 10px;
+          padding-left: 6px;
+        }
+        h1 {
           @include mobile {
-            width: 200px;
-            height: 13px;
-          }
-          h3 {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            font-size: 1rem;
-            font-weight: 600;
-            @include mobile {
-              font-size: 0.5rem;
-              font-weight: 500;
-            }
+            font-size: 18px;
           }
         }
-        .stars-and-more {
-          display: flex;
-          justify-content: start;
-          align-items: center;
-          span {
-            font-size: 16px;
-            margin-right: 10px;
+      }
+      .card {
+        width: 18vw;
+        height: 35vh;
+        background-color: rgb(248, 248, 248);
+        border-radius: 16px;
+        margin-top: 10px;
+        filter: drop-shadow(4px 4px 6px rgb(230, 229, 229));
+        overflow: hidden;
+        border: 1px solid rgb(240, 240, 240);
+
+        @include mobile {
+          width: 40vw;
+          height: 27vh;
+          border-radius: 8px;
+          filter: drop-shadow(0px 2px 2px rgb(230, 229, 229));
+        }
+        &:hover {
+          border: 1px solid rgb(228, 228, 228);
+          scale: 0.97;
+          cursor: pointer;
+        }
+
+        .card-img {
+          width: 100%;
+          height: 60%;
+
+          @include mobile {
+            width: 100%;
+            height: 60%;
+          }
+          // background-color: white;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top, center;
+            transition: all 0.3s ease-in;
+          }
+        }
+      }
+
+      .details-section {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-left: 5px;
+        padding-top: 10px;
+        @include mobile {
+          padding-top: 5px;
+        }
+        // background-color: orange;
+        .text-details {
+          .name-div {
+            width: 250px;
+            height: 30px;
             @include mobile {
-              font-size: 0.6rem;
-              margin-right: 2px;
+              width: 200px;
+              height: 13px;
             }
-            i {
-              font-size: 20px;
-              margin-right: 2px;
-              color: green;
+            h3 {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              font-size: 1rem;
+              font-weight: 600;
               @include mobile {
-                font-size: 0.7rem;
-                margin-right: 1px;
+                font-size: 0.5rem;
+                font-weight: 500;
               }
             }
           }
-          p {
-            font-size: 1rem;
-            @include mobile {
-              font-size: 0.6rem;
-            }
-            i {
-              font-size: 20px;
-              color: rgb(125, 127, 125);
+          .stars-and-more {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            span {
+              font-size: 16px;
+              margin-right: 10px;
               @include mobile {
                 font-size: 0.6rem;
-                margin-right: 1px;
+                margin-right: 2px;
+              }
+              i {
+                font-size: 20px;
+                margin-right: 2px;
+                color: green;
+                @include mobile {
+                  font-size: 0.7rem;
+                  margin-right: 1px;
+                }
+              }
+            }
+            p {
+              font-size: 1rem;
+              @include mobile {
+                font-size: 0.6rem;
+              }
+              i {
+                font-size: 20px;
+                color: rgb(125, 127, 125);
+                @include mobile {
+                  font-size: 0.6rem;
+                  margin-right: 1px;
+                }
               }
             }
           }
-        }
-        .types-div {
-          width: 250px;
-          height: 20px;
-          padding-top: 2px;
-          margin-bottom: 5px;
-          @include mobile {
-            padding: none;
-            height: 12px;
-          }
-          p {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            font-size: 13px;
-            font-weight: 300;
+          .types-div {
+            width: 250px;
+            height: 20px;
+            padding-top: 2px;
+            margin-bottom: 5px;
             @include mobile {
-              font-size: 0.5rem;
+              padding: none;
+              height: 12px;
+            }
+            p {
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
+              font-size: 13px;
               font-weight: 300;
+              @include mobile {
+                font-size: 0.5rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-weight: 300;
+              }
             }
           }
-        }
-        .location-div {
-          width: 250px;
-          height: 25px;
-          @include mobile {
-            height: 15px;
-          }
-          h5 {
-            font-size: 14px;
-            font-weight: 500;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            opacity: 0.8;
-            color: rgb(92, 92, 92);
+          .location-div {
+            width: 250px;
+            height: 25px;
             @include mobile {
+              height: 15px;
+            }
+            h5 {
+              font-size: 14px;
+              font-weight: 500;
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              font-size: 0.5rem;
+              opacity: 0.8;
+              color: rgb(92, 92, 92);
+              @include mobile {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 0.5rem;
+              }
             }
           }
         }
