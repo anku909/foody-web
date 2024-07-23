@@ -3,6 +3,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../redux/slices/DataSlice";
 import Shimmer from "./Shimmer";
+import { mobileApiUrl, pcApiUrl } from "../Constants";
 
 function AllCards({ visible, setVisible }) {
   const dispatch = useDispatch();
@@ -18,12 +19,7 @@ function AllCards({ visible, setVisible }) {
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
       );
-    let apiUrl;
-    if (isMobile) {
-      apiUrl = "https://proxy-server-alpha-eosin.vercel.app/api/v1/mobile";
-    } else {
-      apiUrl = "https://proxy-server-alpha-eosin.vercel.app/api/v1/pc";
-    }
+    let apiUrl = isMobile ? mobileApiUrl : pcApiUrl;
     dispatch(fetchData(apiUrl));
   }, []);
 
@@ -44,7 +40,7 @@ function AllCards({ visible, setVisible }) {
     }
   }, [data]);
 
-  console.log(data.data);
+
 
   const handlesortDeliveryTime = () => {
     const filterlist = listOfRestaurants.filter(
@@ -67,10 +63,6 @@ function AllCards({ visible, setVisible }) {
     }
   };
 
-  // const handlefitlerOptions = () => {
-  //   setVisible(!visible);
-  // };
-
   return (
     <>
       <div className="filters-search-section">
@@ -85,9 +77,7 @@ function AllCards({ visible, setVisible }) {
         <button onClick="" className="filter-options-btn">
           Filter
         </button>
-        {/* {visible && (
-          <FilterOptionsPopup visible={visible} setVisible={setVisible} />
-        )} */}
+     
         <button
           onClick={handlesortDeliveryTime}
           className="fast-delivery-sort-button"

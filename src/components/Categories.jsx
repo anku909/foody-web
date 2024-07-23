@@ -1,23 +1,17 @@
 import React, { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { fetchData } from "../redux/slices/DataSlice";
 import { Link } from "react-router-dom";
 import { headingData } from "../data/headingData";
 import loadingImg from "../assets/loading-logo.png";
+import { categoriesImgBaseUrl } from "../Constants";
 
 function CategoriesComp({}) {
-  const dispatch = useDispatch();
   const data = useSelector((state) => state.data);
   const [categories, setCategories] = useState([]);
-  const url = "https://proxy-server-alpha-eosin.vercel.app/api/v1/collections";
   const [heading, setHeading] = useState(headingData[0].heading);
   const [currentHeadingIndex, setCurrentHeadingIndex] = useState(0);
   const [isLoading, setIsloading] = useState(true);
-
-  useEffect(() => {
-    dispatch(fetchData(url));
-  }, []);
 
   useEffect(() => {
     if (
@@ -34,8 +28,6 @@ function CategoriesComp({}) {
     }
   }, [data]);
 
-  let baseUrl =
-    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/";
   function handleSlideLeft() {
     var slider = document.querySelector(".categories-choices");
     slider.scrollLeft -= 600;
@@ -111,15 +103,15 @@ function CategoriesComp({}) {
           </div>
           <div className="categories-choices">
             <div className="categories-scroll-div">
-              {categoriesWithUrlTags.map((catges) => {
+              {categoriesWithUrlTags.map((catges, index) => {
                 {
                   return (
                     <Link
                       to={`/categories/${catges.urlTags.tags}/${catges.urlTags.collectionId}`}
                     >
                       <img
-                        key={catges.category.id}
-                        src={baseUrl + catges.category.imageId}
+                        key={index}
+                        src={categoriesImgBaseUrl + catges.category.imageId}
                         alt=""
                       />
                     </Link>

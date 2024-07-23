@@ -3,18 +3,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../redux/slices/DataSlice";
 import RestaurantCard from "./RestaurantCard";
 import { useParams } from "react-router-dom";
+import { serverUrl } from "../Constants";
 
 function CollectionsCategories() {
   const data = useSelector((state) => state.data);
   const dispatch = useDispatch();
   const [collectionsData, setCollectionsData] = useState();
   const { type, id } = useParams();
-  const Url = `https://proxy-server-alpha-eosin.vercel.app/api/v1/collections/${type}/${id}`;
+  const Url = `${serverUrl}/${type}/${id}`;
 
   useEffect(() => {
     dispatch(fetchData(Url));
   }, []);
-  console.log(collectionsData);
+
   useEffect(() => {
     if (data && data?.data && data?.data?.data) {
       const collections = data?.data?.data;

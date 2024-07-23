@@ -6,7 +6,7 @@ function Header({ handleSignIn }) {
   const cartData = useSelector((state) => state.cart);
 
   const cartLength = cartData ? cartData.length : 0;
-  // console.log(cartData);
+
   return (
     <>
       <div className="header w-full h-20 bg-slate-400 mb-40">

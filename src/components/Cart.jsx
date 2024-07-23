@@ -1,28 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { clearCart } from "../redux/slices/CartSlice";
+import { addItem, clearCart } from "../redux/slices/CartSlice";
+import { cartImgBaseUrl } from "../Constants";
 
 const Cart = () => {
-  const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const items = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   useEffect(() => {
     const storedCartItems = localStorage.getItem("cartItems");
-    if (storedCartItems && storedCartItems) {
-      setCartItems(JSON.parse(storedCartItems));
+    if (items == 0 && storedCartItems > 0) {
+      dispatch(addItem(storedCartItems))
     }
-  }, []);
-
-  useEffect(() => {
-    setCartItems(items);
   }, [items]);
 
-  // Update localStorage whenever cart items change
+ 
+
   useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }, [cartItems]);
+    localStorage.setItem("cartItems", JSON.stringify(items));
+  }, [items]);
+
 
   const handleClearCart = () => {
     dispatch(clearCart());
@@ -34,19 +32,19 @@ const Cart = () => {
     navigate("/");
   }
 
-  const handleRemove = () => {};
+
 
   useEffect(() => {
-    const totalPriceInCents = cartItems.reduce((total, item) => {
+    const totalPriceInCents = items.reduce((total, item) => {
       const price =
         item?.card?.info?.defaultPrice ?? item?.card?.info?.price ?? 0;
       const quantity = item.card.quantity ?? 1;
       return total + price * quantity;
     }, 0);
     setTotalPrice(Math.floor(totalPriceInCents / 100));
-  }, [cartItems]);
+  }, [items]);
 
-  const groupedItems = cartItems.reduce((acc, curr) => {
+  const groupedItems = items.reduce((acc, curr) => {
     const foundItem = acc.find(
       (item) => item.card.info.id === curr.card.info.id
     );
@@ -58,19 +56,16 @@ const Cart = () => {
     return acc;
   }, []);
 
-  let imgaeBaseURL =
-    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-
   return (
     <>
       <div className="cart w-full min-h-screen  xl:bg-white xl:px-80 xl:pt-24 z-40 mb-12">
         <div
           className={`cart-container w-full min-h-[80vh]  flex flex-col ${
-            cartItems.length > 0 ? "" : "justify-center"
+            items.length > 0 ? "" : "justify-center"
           }`}
         >
           <div
-            className={`cart-empty ${cartItems.length > 0 ? "hidden" : "flex"}`}
+            className={`cart-empty ${items.length > 0 ? "hidden" : "flex"}`}
           >
             <div className="empty-cart-img ">
               <img
@@ -89,13 +84,14 @@ const Cart = () => {
               </div>
               <div className="carts-details xl:w-[53vw] h-10 mt-5 flex justify-between items-center xl:px-4">
                 <h4 className="text-xl font-semibold opacity-70 ">
-                  Total Items ({cartItems.length})
+                  Total Items ({items.length})
                 </h4>
                 <h4 className="text-xl font-semibold opacity-70">
                   Total Price : {totalPrice}
                 </h4>
                 <button
-                  onClick={handleClearCart}
+                  onClick={() => handleClearCart()}
+                  
                   className="xl:text-lg xl:px-4 xl:py-[2px] xl:bg-red-600 xl:rounded-md text-center font-semibold text-white"
                 >
                   clear cart
@@ -149,13 +145,12 @@ const Cart = () => {
                       <div className="img-section bg-[#83c791e2] xl:w-40 xl:h-40 xl:rounded-2xl flex overflow-hidden items-center justify-center xl:mt-3 cursor-pointer">
                         <img
                           className="  xl:w-full xl:h-full object-cover"
-                          src={imgaeBaseURL + card?.card.info.imageId}
+                          src={cartImgBaseUrl + card?.card.info.imageId}
                           alt=""
                         />
                       </div>
                       <button
                         key={card.card.info.id}
-                        onClick={handleRemove}
                         className="add-item absolute bg-[#e33f3f] xl:px-4 xl:py-2 xl:rounded-lg text-white xl:bottom-[-5px] xl:left-[42px] xl:font-semibold text-sm "
                       >
                         Remove

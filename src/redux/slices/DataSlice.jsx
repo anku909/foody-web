@@ -6,7 +6,7 @@ export const fetchData = createAsyncThunk("fetchAllData", async (url) => {
     const json = await axios.get(url);
     return json.data;
   } catch (error) {
-    console.log(error.message);
+    console.error(error.message);
   }
 });
 

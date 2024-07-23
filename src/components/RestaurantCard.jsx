@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { imgaeBaseURL } from "../Constants";
+
+
 function RestaurantCard({ resdata }) {
-  let imgaeBaseURL =
-    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+
+
   return (
     <>
       <div className="card">

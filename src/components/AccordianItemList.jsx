@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React  from "react";
 import { useDispatch } from "react-redux";
 import { addItem } from "../redux/slices/CartSlice";
+import { cartImgBaseUrl } from "../Constants";
 
 function AccordianItemList({ itemCards }) {
   const dispatch = useDispatch();
@@ -8,8 +9,8 @@ function AccordianItemList({ itemCards }) {
     dispatch(addItem(card));
   };
 
-  let imgaeBaseURL =
-    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+
+  
   return (
     <>
       <div className="items-container w-full">
@@ -46,7 +47,8 @@ function AccordianItemList({ itemCards }) {
                 <div className="img-section bg-[#83c791e2] xl:w-40 xl:h-40 xl:rounded-2xl flex overflow-hidden items-center justify-center xl:mt-3 cursor-pointer">
                   <img
                     className="  xl:w-full xl:h-full object-cover"
-                    src={imgaeBaseURL + card?.card.info.imageId}
+                    src={cartImgBaseUrl
+                       + card?.card.info.imageId}
                     alt=""
                   />
                 </div>

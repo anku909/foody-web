@@ -5,7 +5,7 @@ import playStoreImg from "../assets/play_store.png";
 function Footer() {
   return (
     <>
-      <div className="footer w-full h-[30vh] xl:mt-60">
+      <div className="footer w-full h-[30vh] xl:mt-24">
         <div className="app-links w-full xl:h-28 bg-[#e7f2f3] flex justify-between items-center xl:px-[22vw]">
           <h1 className="text-4xl font-semibold ">
             {" "}

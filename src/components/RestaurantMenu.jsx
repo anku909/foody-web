@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../redux/slices/DataSlice";
 import { useParams } from "react-router-dom";
 import CategoreyAccordian from "./CategoreyAccordian";
+import {target_url} from "../Constants"
 
 function RestaurantMenu() {
   const { resId } = useParams();
@@ -11,9 +12,9 @@ function RestaurantMenu() {
   const [resData, setResData] = useState([]);
   const [showIndex, setShowIndex] = useState(0);
 
-  const target_url = `https://proxy-server-alpha-eosin.vercel.app/api/v1/restaurantmenu/${resId}`;
+  
   useEffect(() => {
-    dispatch(fetchData(target_url));
+    dispatch(fetchData(target_url + resId));
   }, []);
   useEffect(() => {
     if (data && data?.data && data?.data?.data && data?.data?.data?.cards) {
@@ -21,6 +22,9 @@ function RestaurantMenu() {
       setResData(restaurants);
     }
   }, [data]);
+
+    // Update localStorage whenever cart items change
+
 
   const categoriesData =
     data?.data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
