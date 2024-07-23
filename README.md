@@ -2,6 +2,8 @@
 # Foody Web App
 
 ##### Food Ordering App Frontend.
+![Screenshot_2024-07-24_00_32_49](https://github.com/user-attachments/assets/e84e1fac-32f4-4437-9107-80c4e0a2a50f)
+
 ## Run Locally
 
 Clone the project
@@ -30,9 +32,9 @@ Start devlopment server
 
 #### App is using live server:  https://proxy-server-7pd4i47gg-anku909s-projects.vercel.app/
 
-#### Local developmet server: https://github.com/anku909/proxy-server.git
-
 ##### change `Constant.js` live server Api's to `localhost:3000` server Api's.
+
+#### Local developmet server: https://github.com/anku909/proxy-server.git
 
 
 
