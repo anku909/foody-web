@@ -4,6 +4,8 @@
 ##### Food Ordering App Frontend.
 ![Screenshot_2024-07-24_00_32_49](https://github.com/user-attachments/assets/e84e1fac-32f4-4437-9107-80c4e0a2a50f)
 
+#### Live : https://foody-a0k35bbzv-anku909s-projects.vercel.app/
+
 ## Run Locally
 
 Clone the project
